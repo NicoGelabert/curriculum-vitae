@@ -104,14 +104,15 @@ document.addEventListener("alpine:init", async () => {
 
 Alpine.start();
 // dark mode
-document.getElementById('toggle-theme').addEventListener('click', function() {
+const toggleThemeButtons = document.querySelectorAll('.toggle-theme');
+function toggleTheme() {
   document.documentElement.classList.toggle('dark');
-});
-
-const toggleThemeButton = document.getElementById('toggle-theme');
-
-toggleThemeButton.addEventListener('click', function() {
-    toggleThemeButton.classList.toggle('dark');
+  toggleThemeButtons.forEach(button => {
+    button.classList.toggle('dark');
+  });
+}
+toggleThemeButtons.forEach(button => {
+  button.addEventListener('click', toggleTheme);
 });
 // dark mode
 

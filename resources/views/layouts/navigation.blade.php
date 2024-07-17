@@ -144,7 +144,7 @@
             <!-- Tema -->
             <li>
                 <div class="relative flex gap-2 items-center">
-                    <button id="toggle-theme" class="relative inline-flex items-center h-6 rounded-full w-12 transition-colors bg-gray-200 dark:bg-gray-600 focus:outline-none">
+                    <button class="toggle-theme relative inline-flex items-center h-6 rounded-full w-12 transition-colors bg-gray-200 dark:bg-gray-600 focus:outline-none">
                         <div class="flex justify-between w-full px-1 pt-px">
                             <i class="fi fi-rr-sun text-transparent dark:text-white"></i>
                             <i class="fi fi-br-moon text-black dark:text-transparent"></i>
@@ -270,7 +270,7 @@
             </ul>
         </div>
         <div class="relative flex gap-2 items-center">
-            <button id="toggle-theme" class="relative inline-flex items-center h-6 rounded-full w-12 transition-colors bg-gray-200 dark:bg-gray-600 focus:outline-none">
+            <button class="toggle-theme relative inline-flex items-center h-6 rounded-full w-12 transition-colors bg-gray-200 dark:bg-gray-600 focus:outline-none">
                 <div class="flex justify-between w-full px-1 pt-px">
                     <i class="fi fi-rr-sun text-transparent dark:text-white"></i>
                     <i class="fi fi-br-moon text-black dark:text-transparent"></i>
