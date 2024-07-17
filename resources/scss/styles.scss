@@ -4,10 +4,9 @@ html {
     scroll-behavior: smooth;
   }
 body{
-    @apply bg-white text-blue dark:bg-blue dark:text-white;
-    font-family: $primary-font;
+    @apply bg-white text-black dark:bg-black dark:text-white font-sans;
     h1, h2, h3, h4, h5, h6{
-        font-family: $primary-font;
+        @apply font-sans;
     }
     h1{
         @apply text-5xl;
@@ -31,32 +30,27 @@ body{
         @apply text-base;
     }
     a{
-        @apply hover:text-primary;
+        @apply hover:text-primary_light dark:hover:text-primary_dark;
     }
     .logo{
-        @apply h-auto max-w-40 transition-all fill-primary;
+        @apply h-auto max-w-12 transition-all fill-black dark:fill-white;
         a{
-            @apply hover:bg-transparent hover:text-white;
+            @apply hover:bg-transparent dark:hover:bg-transparent hover:text-white;
         }
     }
-    // nav{
-    //     .logo{
-    //         @apply bg-primary p-2;
-    //     }
-    // }
     .logo-hamburguer{
         svg{
-            @apply w-3/4 h-auto fill-blue dark:fill-white;
+            @apply max-w-20 h-auto fill-black dark:fill-white;
         }
     }
     .toast{
-        @apply flex flex-col items-center justify-between bg-white text-blue dark:bg-blue dark:text-white;
+        @apply flex flex-col items-center justify-between bg-white text-black dark:bg-black dark:text-white;
         .progress{
-            @apply bg-blue dark:bg-white;
+            @apply bg-black dark:bg-white;
         }
     }
     header{
-        @apply h-auto fixed top-0 w-full block shadow-none bg-transparent text-white dark:text-white;
+        @apply h-auto fixed top-0 w-full block shadow-none bg-transparent text-black dark:text-white;
         transition: top 0.3s, background-color 0.3s ease;
         i {
             @apply leading-none text-lg;
@@ -71,7 +65,7 @@ body{
         }
     }
     .mobile-menu{
-        @apply bg-white text-blue dark:bg-blue dark:text-white;
+        @apply bg-white text-black dark:bg-black dark:text-white;
         i{
             @apply text-2xl;
         }
@@ -81,20 +75,20 @@ body{
             line-height: 0;
         }
         a{
-            @apply hover:bg-primary focus:bg-primary active:bg-primary hover:text-blue focus:text-blue active:text-blue dark:hover:bg-neutral-900 dark:focus:bg-neutral-900 dark:active:bg-neutral-900;
+            @apply hover:bg-primary_light focus:bg-primary_light active:bg-primary_light hover:text-white focus:text-black active:text-black dark:hover:bg-primary_dark dark:hover:text-black dark:active:bg-primary_dark;
         }
         .dropdown{
             @apply absolute z-10 w-full text-center;
             li{
-                @apply bg-gray-100 text-blue dark:bg-neutral-900 dark:hover:bg-neutral-800 w-full;
+                @apply bg-black_light text-white dark:hover:bg-primary_dark w-full;
                 a{
-                    @apply pt-0 pb-0 hover:bg-gray-200 dark:hover:bg-neutral-800;
+                    @apply pt-0 pb-0 hover:bg-gray-200 dark:hover:bg-primary_dark;
                 }
             }
             li:hover{
-                @apply bg-primary;
+                @apply bg-primary_light dark:bg-primary_dark;
                 a{
-                    @apply text-blue bg-primary;
+                    @apply text-black bg-primary_light dark:bg-primary_dark;
                 }
             }
         }
@@ -119,7 +113,7 @@ body{
         }
     
         .openbtn span {
-            @apply w-1/2 h-[3px] relative left-[12px] bg-white dark:bg-white rounded inline ;
+            @apply w-1/2 h-[3px] relative left-[12px] bg-black dark:bg-white rounded inline ;
             transition: all .4s;
         }
     
@@ -128,7 +122,7 @@ body{
         }
     
         .openbtn.active span{
-            @apply bg-blue;
+            
             &:nth-of-type(1) {
                 left: 14px;
                 top: 2px;
@@ -151,13 +145,13 @@ body{
     }
     // línea divisoria
     .divider{ 
-        @apply h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-blue to-transparent opacity-0 dark:via-white my-8 md:my-16;
+        @apply h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-0 dark:via-white my-8 md:my-16;
     }
     // Social icons
     .social-icons{
-        @apply text-white;
+        @apply text-black dark:text-white;
         a{
-            @apply aspect-square rounded-md flex justify-center items-center hover:bg-primary hover:text-blue transition-all;
+            @apply aspect-square rounded-md flex justify-center items-center hover:bg-primary_light hover:text-white dark:hover:bg-primary_dark dark:hover:text-black transition-all;
         }
     }
 }

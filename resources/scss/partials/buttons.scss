@@ -2,12 +2,10 @@
 
 // Botón Primario con Animación 
 .btn-primary{
-    @apply w-fit relative px-4 py-2 text-xxs md:text-sm font-bold uppercase rounded-full bg-primary text-blue hover:bg-blue hover:text-white hover:border-primary transition-all;
-    font-family: $primary-font;
+    @apply font-sans w-fit relative px-4 py-2 text-xxs md:text-sm font-bold uppercase rounded-full bg-primary_light text-white hover:bg-black hover:text-white dark:bg-primary_dark dark:text-black dark:hover:bg-black dark:hover:text-white transition-all;
 }
 .btn-secondary{
-    @apply w-fit relative px-4 py-2 text-xxs md:text-sm font-bold uppercase rounded-full bg-transparent text-white hover:bg-blue hover:text-white hover:border-primary transition-all;
-    font-family: $primary-font;
+    @apply font-sans w-fit relative px-4 py-2 text-xxs md:text-sm font-bold uppercase rounded-full bg-transparent text-white hover:bg-black hover:text-white hover:border-primary_light transition-all;
     i{
         @apply absolute right-0 top-1/2 text-transparent;
         transform: translateY(-45%);
@@ -31,20 +29,16 @@
 
 // Urgencias
 .btn-urgencies{
-    @apply flex gap-4 items-center justify-center rounded-3xl p-6 bg-blue text-white;
+    @apply flex gap-4 items-center justify-center rounded-3xl p-6 bg-black text-white;
     i{
         line-height: 0;
     }
 }
 
-footer .btn-urgencies{
-    @apply py-4 px-6 bg-primary text-blue;
-}
-
 // Btn services
 #btnService{
     .service-button{
-        @apply w-full border border-blue/10 py-4 px-8 rounded-2xl flex items-center justify-between;
+        @apply w-full border border-black/10 py-4 px-8 rounded-2xl flex items-center justify-between;
         .service-icon{
             @apply text-xl mr-4;
             line-height: 0;
@@ -53,16 +47,16 @@ footer .btn-urgencies{
             line-height: 0;
         }
         .service-bg-arrow{
-            @apply flex items-center justify-center w-6 h-6 bg-blue/10 text-blue rounded-full;
+            @apply flex items-center justify-center w-6 h-6 bg-black/10 text-black rounded-full;
         }
     }
 }
 #btnService .splide__track--nav>.splide__list>.splide__slide.is-active{
     @apply border-none;
     .service-button{
-        @apply bg-gradient-to-b from-blue to-secondary_blue text-white;
+        @apply bg-gradient-to-b from-black to-black_light text-white;
         .service-bg-arrow{
-            @apply bg-primary;
+            @apply bg-primary_light;
         }
     }
 }

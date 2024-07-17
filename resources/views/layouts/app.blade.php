@@ -12,7 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title inertia>{{ config('app.name', 'Urquiza Soluciones') }}</title>
+        <title inertia>{{ config('app.name') }}</title>
         <meta name="description" content="{{__('Bienvenido a Urquiza Soluciones, somos una empresa que entiende la importancia de contar con sistemas de climatización eficientes, instalaciones eléctricas seguras y sistemas de fontanería confiables en su hogar o negocio. Por eso, nos enorgullece ofrecer servicios de primera calidad que garantizan su comodidad y tranquilidad en todo momento.')}}" lang="es">
 
         <meta name="keywords" content="{{__('Instalación de Aires Acondicionados en Málaga, carga de gas, soluciones de electricidad en Málaga, Servicio de fontanería, Reformas en general.')}}">
@@ -39,9 +39,6 @@
         align-items: center;
         z-index: 1000;
         gap: 2rem;
-    }
-    #loader-wrapper svg{
-        fill:#6C4852;
     }
 
     #loader {
@@ -103,7 +100,7 @@
                     <div class="font-semibold" x-text="message"></div>
                     <button
                         @click="close"
-                        class="w-[30px] h-[30px] flex items-center justify-center rounded-full hover:bg-blue/10 transition-colors"
+                        class="w-[30px] h-[30px] flex items-center justify-center rounded-full hover:bg-black/10 transition-colors"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

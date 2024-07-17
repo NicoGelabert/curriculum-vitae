@@ -104,15 +104,15 @@ document.addEventListener("alpine:init", async () => {
 
 Alpine.start();
 // dark mode
-// document.getElementById('toggle-theme').addEventListener('click', function() {
-//   document.documentElement.classList.toggle('dark');
-// });
+document.getElementById('toggle-theme').addEventListener('click', function() {
+  document.documentElement.classList.toggle('dark');
+});
 
-// const toggleThemeButton = document.getElementById('toggle-theme');
+const toggleThemeButton = document.getElementById('toggle-theme');
 
-// toggleThemeButton.addEventListener('click', function() {
-//     toggleThemeButton.classList.toggle('dark');
-// });
+toggleThemeButton.addEventListener('click', function() {
+    toggleThemeButton.classList.toggle('dark');
+});
 // dark mode
 
 // SPLIDE

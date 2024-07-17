@@ -12,7 +12,7 @@
                 data-payment-id="{{ $payment->id }}" 
                 data-created-at="{{ \Carbon\Carbon::parse($payment->created_at)->format('dm-Y') }}" 
                 onclick="openWhatsApp(this)"
-                class="h-10 w-10 aspect-square rounded-md bg-blue/5 p-2 ring-1 ring-blue/10" >
+                class="h-10 w-10 aspect-square rounded-md bg-black/5 p-2 ring-1 ring-black/10" >
                     <i class="flex text-2xl leading-none fi fi-brands-whatsapp"></i>
                 </a>
             </div>

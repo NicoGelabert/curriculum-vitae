@@ -4,7 +4,7 @@
     </div>
     <h3 class="text-center">Nuestros clientes</h3>
     <p class="text-center">Desde pequeños emprendedores hasta grandes corporaciones, cada cliente es único.</p>
-    <div class="flex items-center justify-center text-blue">
+    <div class="flex items-center justify-center text-black">
         <ul class="flex flex-wrap gap-4">
             @foreach($clients as $client)
             <li class="max-w-20 h-auto">

@@ -14,13 +14,16 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                
-            },
+                'sans': ['Lexend Deca', 'sans-serif'],
+              },
             colors: {
-                white: '#FAFDFF',
-                primary: '#FCFF04',
-                blue: '#011627',
-                secondary_blue: '#04508D',
+                white           : '#EEF0F2',
+                gray_primary    : '#E7E5E5',
+                gray_light      : '#F1F5F9',
+                primary_light   : '#454ADE',
+                primary_dark    : '#A8EB12',
+                black_light     : '#202124',
+                black           : '#191919',
             },
             fontSize: {
                 xxs: '0.6rem',

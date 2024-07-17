@@ -4,14 +4,14 @@ header{
     }
 }
 .scrolled-bottom{
-    @apply shadow-md bg-white text-blue dark:bg-blue dark:text-white;
+    @apply shadow-md bg-white text-black dark:bg-black dark:text-white;
     .logo a{
-        @apply hover:text-blue;
+        @apply hover:text-black;
     }
     .openbtn span {
-        @apply bg-blue;
+        @apply bg-black;
     }
     .social-icons{
-        @apply text-blue;
+        @apply text-black;
     }
 }

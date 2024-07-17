@@ -1,10 +1,10 @@
 .home-hero-banner{
-    @apply flex items-center justify-evenly bg-gradient-to-b from-blue to-secondary_blue text-white;
+    @apply flex items-center justify-evenly text-black;
     i{
         @apply text-3xl leading-none;
     }
     hr{
-        @apply border-t-2 border-blue dark:border-white;
+        @apply border-t-2 border-black dark:border-white;
     }
     img{
         @apply w-auto;
@@ -22,7 +22,7 @@
 
         }
         .splide__pagination__page.is-active{
-            @apply bg-primary scale-100 w-4;
+            @apply bg-primary_light scale-100 w-4;
         }
     }
 }
@@ -55,6 +55,6 @@
 }
 #contact{
     .social-icons{
-        @apply text-blue
+        @apply text-black dark:text-white;
     }
 }

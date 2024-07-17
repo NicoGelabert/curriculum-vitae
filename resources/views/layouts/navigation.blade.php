@@ -79,7 +79,7 @@
                     </a>
                 </li>
             </ul>
-            <div class="flex justify-center gap-4 social-icons text-blue">
+            <div class="flex justify-center gap-4 social-icons text-black">
                 <a href="https://wa.me/34615338966" class="h-10 w-10 aspect-square " target="_blank">
                     <i class="flex text-2xl leading-none fi fi-brands-whatsapp"></i>
                 </a>
@@ -142,18 +142,18 @@
             </li>
 
             <!-- Tema -->
-            <!-- <li>
+            <li>
                 <div class="relative flex gap-2 items-center">
                     <button id="toggle-theme" class="relative inline-flex items-center h-6 rounded-full w-12 transition-colors bg-gray-200 dark:bg-gray-600 focus:outline-none">
                         <div class="flex justify-between w-full px-1 pt-px">
                             <i class="fi fi-rr-sun text-transparent dark:text-white"></i>
-                            <i class="fi fi-br-moon text-blue dark:text-transparent"></i>
+                            <i class="fi fi-br-moon text-black dark:text-transparent"></i>
                         </div>
                         <span class="sr-only">Toggle theme</span>
                         <span class="indicator absolute left-0 inline-block w-5 h-5 bg-white rounded-full shadow-sm transition-transform"></span>
                     </button>
                 </div>
-            </li> -->
+            </li>
 
             <!-- Servicios -->
             <li x-data="{open: false}" class="relative">
@@ -269,16 +269,16 @@
                 @endforeach
             </ul>
         </div>
-        <!-- <div class="relative flex gap-2 items-center">
+        <div class="relative flex gap-2 items-center">
             <button id="toggle-theme" class="relative inline-flex items-center h-6 rounded-full w-12 transition-colors bg-gray-200 dark:bg-gray-600 focus:outline-none">
                 <div class="flex justify-between w-full px-1 pt-px">
                     <i class="fi fi-rr-sun text-transparent dark:text-white"></i>
-                    <i class="fi fi-br-moon text-blue dark:text-transparent"></i>
+                    <i class="fi fi-br-moon text-black dark:text-transparent"></i>
                 </div>
                 <span class="sr-only">Toggle theme</span>
                 <span class="indicator absolute left-0 inline-block w-5 h-5 bg-white rounded-full shadow-sm transition-transform"></span>
             </button>
-        </div> -->
+        </div>
         <x-hamburguer />
     </div>
 </header>

@@ -43,7 +43,7 @@
                                     </div>
                                     <ul class="flex flex-wrap gap-2">
                                         @foreach($project->tags as $tag)
-                                        <li class="mt-1 bg-gray-50 text-xxs w-fit rounded-full px-2 py-1 text-blue">{{ $tag->name }}</li>
+                                        <li class="mt-1 bg-gray-50 text-xxs w-fit rounded-full px-2 py-1 text-black">{{ $tag->name }}</li>
                                         @endforeach
                                     </ul>
                                 </div>

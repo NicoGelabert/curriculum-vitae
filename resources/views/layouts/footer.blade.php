@@ -17,14 +17,6 @@
             <div>
                 <h6>{{ __('Contacto') }}</h6>
             </div>
-            <div>
-                <a href="tel:+34615338966">
-                    <div class="btn-urgencies">
-                    <i class="fi fi-rr-phone-call"></i>
-                        <h6>{{ __('Urgencias') }}</h6>
-                    </div>
-                </a>
-            </div>
         </div>
     </div>
     <hr class="footer-divider" />

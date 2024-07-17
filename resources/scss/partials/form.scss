@@ -21,7 +21,7 @@
 
 #quotationForm{
     .checkbox-container .peer:checked ~ label {
-        @apply bg-primary text-white;
+        @apply bg-primary_light text-white;
     }
 
 }

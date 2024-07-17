@@ -5,7 +5,7 @@
         <div class="flex flex-col justify-center md:items-stretch gap-12 max-w-screen-xl px-4 pt-24 mx-auto md:px-16 md:flex-row overflow-hidden">
 
             <div class="flex flex-col justify-start gap-8 w-full md:w-1/2">
-                <hr class="border-t-2 border-blue" />
+                <hr class="border-t-2 border-black" />
                 <div class="flex justify-between">
                     <h3 class="animate-h3">0{{ $service->id }}</h3>
                     <i class="fi fi-br-arrow-up-left text-4xl animate-arrow overflow-hidden"></i>
@@ -65,7 +65,7 @@
                     </ul>
                 </div>
             </div>
-            <div x-show="isOpen" @click.away="isOpen = false" class="fixed inset-0 flex justify-center bg-blue bg-opacity-75 z-50 overflow-auto">
+            <div x-show="isOpen" @click.away="isOpen = false" class="fixed inset-0 flex justify-center bg-black bg-opacity-75 z-50 overflow-auto">
                 <div class="mx-8 my-8 lg:my-auto lg:flex lg:flex-row lg:gap-8 lg:max-h-1/2 lg:max-w-screen-xl">
                     <button @click="isOpen = false" class="absolute top-0 right-0 m-4 text-white text-xl">&times;</button>
                     <div class="lg:w-1/2 flex justify-center">
@@ -83,7 +83,7 @@
                         <div>
                             <ul class="flex gap-2 flex-wrap">
                                 <template x-for="tag in currentTags" :key="tag">
-                                    <li class="mt-1 bg-gray-50 text-xxs w-fit rounded-full px-4 py-2 text-blue" x-text="tag"></li>
+                                    <li class="mt-1 bg-gray-50 text-xxs w-fit rounded-full px-4 py-2 text-black" x-text="tag"></li>
                                 </template>
                             </ul>
                         </div>
