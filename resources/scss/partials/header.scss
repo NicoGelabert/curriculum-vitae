@@ -1,0 +1,17 @@
+header{
+    nav ul li a{
+        @apply py-6 transition-all text-sm lg:text-base;
+    }
+}
+.scrolled-bottom{
+    @apply shadow-md bg-white text-blue dark:bg-blue dark:text-white;
+    .logo a{
+        @apply hover:text-blue;
+    }
+    .openbtn span {
+        @apply bg-blue;
+    }
+    .social-icons{
+        @apply text-blue;
+    }
+}

@@ -1,0 +1,60 @@
+.home-hero-banner{
+    @apply flex items-center justify-evenly bg-gradient-to-b from-blue to-secondary_blue text-white;
+    i{
+        @apply text-3xl leading-none;
+    }
+    hr{
+        @apply border-t-2 border-blue dark:border-white;
+    }
+    img{
+        @apply w-auto;
+    }
+    .vertical-text{
+        writing-mode: vertical-lr;
+    }
+    .splide__pagination{
+        @apply absolute bottom-8 gap-1;
+        .splide__pagination__page{
+            @apply bg-white w-2 h-2;
+            border-radius:20px;
+            cursor:pointer;
+            transition:0.3s ease width;
+
+        }
+        .splide__pagination__page.is-active{
+            @apply bg-primary scale-100 w-4;
+        }
+    }
+}
+#services{
+    @apply my-16;
+}
+//Cobertura
+.cobertura{
+    iframe{
+        @apply w-full h-[450px];
+    }
+    .cobText::before{
+        @apply bg-none sm:bg-[url('/storage/app/public/img/destination.png')] bg-no-repeat bg-contain bg-right-bottom top-0 sm:bottom-36 md:bottom-4 right-4 lg:bottom-0 lg:right-24 lg:top-auto w-16 h-16 lg:w-full lg:h-full absolute;
+        content: "";
+        max-height: 85px;
+        opacity: 0.5;
+    }
+}
+// Fin Cobertura
+#faqs{
+    .questions{
+        @apply flex flex-col md:flex-row justify-between flex-wrap w-full gap-4;
+        .question{
+            @apply w-full md:w-[30%];
+        }
+    }
+    .vertical-text{
+        writing-mode: vertical-lr;
+    }
+}
+#contact{
+    .social-icons{
+        @apply text-blue
+    }
+}

@@ -1,0 +1,163 @@
+@use './globals' as *;
+@use './animations/animations' as *;
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    @apply bg-white text-blue dark:bg-blue dark:text-white;
+    font-family: $primary-font;
+    h1, h2, h3, h4, h5, h6{
+        font-family: $primary-font;
+    }
+    h1{
+        @apply text-5xl;
+    }
+    h2{
+        @apply text-4xl;
+    }
+    h3{
+        @apply text-4xl md:text-5xl font-bold;
+    }
+    h4{
+        @apply text-xl font-bold;
+    }
+    h5{
+        @apply text-3xl;
+    }
+    h6{
+        @apply text-lg;
+    }
+    p{
+        @apply text-base;
+    }
+    a{
+        @apply hover:text-primary;
+    }
+    .logo{
+        @apply h-auto max-w-40 transition-all fill-primary;
+        a{
+            @apply hover:bg-transparent hover:text-white;
+        }
+    }
+    // nav{
+    //     .logo{
+    //         @apply bg-primary p-2;
+    //     }
+    // }
+    .logo-hamburguer{
+        svg{
+            @apply w-3/4 h-auto fill-blue dark:fill-white;
+        }
+    }
+    .toast{
+        @apply flex flex-col items-center justify-between bg-white text-blue dark:bg-blue dark:text-white;
+        .progress{
+            @apply bg-blue dark:bg-white;
+        }
+    }
+    header{
+        @apply h-auto fixed top-0 w-full block shadow-none bg-transparent text-white dark:text-white;
+        transition: top 0.3s, background-color 0.3s ease;
+        i {
+            @apply leading-none text-lg;
+          }
+        .indicator {
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease; /* Agregar transición para el cambio de posición */
+        }
+        .dark .indicator {
+            transform: translateX(1.75rem) translateY(-50%); /* Mover el indicador al lado derecho en el modo oscuro */
+        }
+    }
+    .mobile-menu{
+        @apply bg-white text-blue dark:bg-blue dark:text-white;
+        i{
+            @apply text-2xl;
+        }
+    }
+    header, .mobile-menu{
+        i{
+            line-height: 0;
+        }
+        a{
+            @apply hover:bg-primary focus:bg-primary active:bg-primary hover:text-blue focus:text-blue active:text-blue dark:hover:bg-neutral-900 dark:focus:bg-neutral-900 dark:active:bg-neutral-900;
+        }
+        .dropdown{
+            @apply absolute z-10 w-full text-center;
+            li{
+                @apply bg-gray-100 text-blue dark:bg-neutral-900 dark:hover:bg-neutral-800 w-full;
+                a{
+                    @apply pt-0 pb-0 hover:bg-gray-200 dark:hover:bg-neutral-800;
+                }
+            }
+            li:hover{
+                @apply bg-primary;
+                a{
+                    @apply text-blue bg-primary;
+                }
+            }
+        }
+        .cart-widget{
+            @apply text-white mx-2 md:mx-0;
+        }
+        .flag-icon{
+            @apply w-4 mr-[0.5rem];
+        }
+    }
+    // Function to show header according to scroll view
+    
+    // End Function to show header according to scroll view
+    // Hamburguer Menu icon
+    .openbtn {
+        @apply w-[40px] h-[20px] relative rounded cursor-pointer;
+        }
+    
+        .openbtn .openbtn-area{
+            @apply h-full relative flex flex-col justify-around;
+            transition: all .4s;
+        }
+    
+        .openbtn span {
+            @apply w-1/2 h-[3px] relative left-[12px] bg-white dark:bg-white rounded inline ;
+            transition: all .4s;
+        }
+    
+        .openbtn.active .openbtn-area {
+            transform: rotateY(-360deg);
+        }
+    
+        .openbtn.active span{
+            @apply bg-blue;
+            &:nth-of-type(1) {
+                left: 14px;
+                top: 2px;
+                transform: translateY(6px) rotate(-135deg);
+                width: 45%;
+            }
+            &:nth-of-type(2) {
+                opacity: 0;
+            }
+            &:nth-of-type(3) {
+                left: 14px;
+                top: 1px;
+                transform: translateY(-6px) rotate(135deg);
+                width: 45%;
+            }
+        }
+    // Contenedor gral
+    .container{
+        @apply w-full max-w-screen-xl mx-auto px-4 2xl:px-0;
+    }
+    // línea divisoria
+    .divider{ 
+        @apply h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-blue to-transparent opacity-0 dark:via-white my-8 md:my-16;
+    }
+    // Social icons
+    .social-icons{
+        @apply text-white;
+        a{
+            @apply aspect-square rounded-md flex justify-center items-center hover:bg-primary hover:text-blue transition-all;
+        }
+    }
+}

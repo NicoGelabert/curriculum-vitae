@@ -1,0 +1,68 @@
+@use '../globals/variables' as *;
+
+// Botón Primario con Animación 
+.btn-primary{
+    @apply w-fit relative px-4 py-2 text-xxs md:text-sm font-bold uppercase rounded-full bg-primary text-blue hover:bg-blue hover:text-white hover:border-primary transition-all;
+    font-family: $primary-font;
+}
+.btn-secondary{
+    @apply w-fit relative px-4 py-2 text-xxs md:text-sm font-bold uppercase rounded-full bg-transparent text-white hover:bg-blue hover:text-white hover:border-primary transition-all;
+    font-family: $primary-font;
+    i{
+        @apply absolute right-0 top-1/2 text-transparent;
+        transform: translateY(-45%);
+        transition: transform 0.3s, color 0.3s;
+    }
+}
+.btn-secondary:hover i{
+    @apply text-white;
+    transform: translateX(-30%) translateY(-43%);
+}
+.btn-secondary:hover span{
+    @apply pr-4
+}
+.btn-secondary:hover span{
+    @apply pr-6
+}
+.btn-secondary span{
+    transition: padding-right 0.3s;
+}
+// Fin Botón Secundario con Animación 
+
+// Urgencias
+.btn-urgencies{
+    @apply flex gap-4 items-center justify-center rounded-3xl p-6 bg-blue text-white;
+    i{
+        line-height: 0;
+    }
+}
+
+footer .btn-urgencies{
+    @apply py-4 px-6 bg-primary text-blue;
+}
+
+// Btn services
+#btnService{
+    .service-button{
+        @apply w-full border border-blue/10 py-4 px-8 rounded-2xl flex items-center justify-between;
+        .service-icon{
+            @apply text-xl mr-4;
+            line-height: 0;
+        }
+        i{
+            line-height: 0;
+        }
+        .service-bg-arrow{
+            @apply flex items-center justify-center w-6 h-6 bg-blue/10 text-blue rounded-full;
+        }
+    }
+}
+#btnService .splide__track--nav>.splide__list>.splide__slide.is-active{
+    @apply border-none;
+    .service-button{
+        @apply bg-gradient-to-b from-blue to-secondary_blue text-white;
+        .service-bg-arrow{
+            @apply bg-primary;
+        }
+    }
+}
