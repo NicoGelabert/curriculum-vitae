@@ -50,7 +50,7 @@ body{
         }
     }
     header{
-        @apply h-auto fixed top-0 w-full block shadow-none bg-transparent text-black dark:text-white;
+        @apply h-auto relative top-0 w-full block shadow-none bg-transparent text-black dark:text-white;
         transition: top 0.3s, background-color 0.3s ease;
         i {
             @apply leading-none text-lg;
@@ -96,7 +96,7 @@ body{
             @apply text-white mx-2 md:mx-0;
         }
         .flag-icon{
-            @apply w-4 mr-[0.5rem];
+            @apply w-2 h-2 mr-[0.5rem];
         }
     }
     // Function to show header according to scroll view
@@ -151,7 +151,7 @@ body{
     .social-icons{
         @apply text-black dark:text-white;
         a{
-            @apply aspect-square rounded-md flex justify-center items-center hover:bg-primary_light hover:text-white dark:hover:bg-primary_dark dark:hover:text-black transition-all;
+            @apply aspect-square md:aspect-auto rounded-md flex justify-center items-center hover:bg-primary_light hover:text-white dark:hover:bg-primary_dark dark:hover:text-black transition-all;
         }
     }
 }

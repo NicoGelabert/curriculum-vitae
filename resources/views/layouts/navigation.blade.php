@@ -34,13 +34,15 @@
             <div class="logo-hamburguer">
                 <x-application-logo/>
             </div>
-            <ul class="w-3/4 flex flex-col gap-y-12">
-                <li class="relative text-xl font-bold" @click="mobileMenuOpen = false">
+            <ul class="w-full flex flex-col items-center gap-y-12">
+                <li class="relative text-xl" @click="mobileMenuOpen = false">
                     <a href="#servicios">
-                        <div class="flex gap-4 items-center">
-                            <i class="fi fi-rr-tools"></i>
-                            {{ __('Servicios') }}
-                        </div>
+                        {{ __('Experiencia') }}
+                    </a>
+                </li>
+                <li class="relative text-xl" @click="mobileMenuOpen = false">
+                    <a href="#servicios">
+                        {{ __('Educación') }}
                     </a>
                     <!-- <ul
                         class="flex flex-col gap-2 py-4 ml-12"
@@ -54,40 +56,35 @@
                         @endforeach
                     </ul> -->
                 </li>
-                <li class="relative text-xl font-bold" @click="mobileMenuOpen = false">
+                <li class="relative text-xl" @click="mobileMenuOpen = false">
                     <a href="#about">
-                        <div class="flex gap-4 items-center">
-                            <i class="fi fi-rr-user-helmet-safety"></i>
-                            {{ __('Sobre Nosotros') }}
-                        </div>
+                        {{ __('Portfolio') }}
                     </a>
                 </li>
-                <li class="relative text-xl font-bold" @click="mobileMenuOpen = false">
+                <li class="relative text-xl" @click="mobileMenuOpen = false">
                     <a href="#contact">
-                        <div class="flex gap-4 items-center">
-                            <i class="fi fi-rr-envelope-dot"></i>
-                            {{ __('Contacto') }}
-                        </div>
-                    </a>
-                </li>
-                <li class="relative text-xl font-bold">
-                    <a href="tel:+34615338966">
-                        <div class="btn-urgencies">
-                        <i class="fi fi-rr-phone-call"></i>
-                            {{ __('Urgencias') }}
-                        </div>
+                        {{ __('Contacto') }}
                     </a>
                 </li>
             </ul>
             <div class="flex justify-center gap-4 social-icons text-black">
-                <a href="https://wa.me/34615338966" class="h-10 w-10 aspect-square " target="_blank">
+                <a href="https://wa.me/34623037048" class="h-10 w-10 aspect-square" target="_blank">
                     <i class="flex text-2xl leading-none fi fi-brands-whatsapp"></i>
                 </a>
-                <a href="https://www.instagram.com/urquizasoluciones/?hl=es-es" class="h-10 w-10 aspect-square " target="_blank">
+                <a href="mailto:nico.gelabert@gmail.com" class="h-10 w-10 aspect-square" target="_blank">
+                    <i class="flex text-2xl leading-none fi fi-rr-envelope"></i>
+                </a>
+                <a href="https://github.com/NicoGelabert" class="h-10 w-10 aspect-square" target="_blank">
+                    <i class="flex text-2xl leading-none fi fi-brands-github"></i>
+                </a>
+                <a href="https://www.behance.net/nicolasgelabert" class="h-10 w-10 aspect-square" target="_blank">
+                    <i class="flex text-2xl leading-none fi fi-brands-behance"></i>
+                </a>
+                <a href="https://www.instagram.com/nicolas.gelabert.dg/" class="h-10 w-10 aspect-square" target="_blank">
                     <i class="flex text-2xl leading-none fi fi-brands-instagram"></i>
                 </a>
-                <a href="#zona-de-cobertura" class="h-10 w-10 aspect-square">
-                    <i class="flex text-2xl leading-none fi fi-rs-map-marker"></i>
+                <a href="https://www.linkedin.com/in/nicolasgelabert/" class="h-10 w-10 aspect-square" target="_blank">
+                    <i class="flex text-2xl leading-none fi fi-brands-linkedin"></i>
                 </a>
             </div>
         </div>
@@ -100,7 +97,7 @@
         </div>
         <ul class="grid grid-flow-col items-center justify-end gap-2 lg:gap-4">
             <!-- Idiomas -->
-            <li x-data="{open: false}" class="relative h-full">
+            <!-- <li x-data="{open: false}" class="relative h-full">
                 <a
                     @click="open = !open"
                     class="cursor-pointer flex items-center px-navbar-item h-full"
@@ -139,10 +136,10 @@
                         @endif
                     @endforeach
                 </ul>
-            </li>
+            </li> -->
 
             <!-- Tema -->
-            <li>
+            <!-- <li>
                 <div class="relative flex gap-2 items-center">
                     <button class="toggle-theme relative inline-flex items-center h-6 rounded-full w-12 transition-colors bg-gray-200 dark:bg-gray-600 focus:outline-none">
                         <div class="flex justify-between w-full px-1 pt-px">
@@ -153,7 +150,7 @@
                         <span class="indicator absolute left-0 inline-block w-5 h-5 bg-white rounded-full shadow-sm transition-transform"></span>
                     </button>
                 </div>
-            </li>
+            </li> -->
 
             <!-- Servicios -->
             <li x-data="{open: false}" class="relative">
@@ -212,7 +209,7 @@
                     {{ __('Contacto') }}
                 </a>
             </li>
-            <li>
+            <!-- <li>
                 <div class="flex justify-center gap-4 social-icons">
                     <a href="https://wa.me/34615338966" class="h-6 w-6 aspect-square rounded-md p-2" target="_blank">
                         <i class="flex text-base leading-none fi fi-brands-whatsapp"></i>
@@ -224,7 +221,7 @@
                         <i class="flex text-base leading-none fi fi-rs-map-marker"></i>
                     </a>
                 </div>
-            </li>
+            </li> -->
         </ul>
     </nav>
 

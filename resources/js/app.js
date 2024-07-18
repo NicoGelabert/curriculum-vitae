@@ -119,7 +119,7 @@ toggleThemeButtons.forEach(button => {
 // SPLIDE
 document.addEventListener( 'DOMContentLoaded', function () {
   // Home Hero Banner
-  var homeHeroBanner = new Splide('.home-hero-banner', {
+  var homeHeroBanner = new Splide('.home-hero-banner-content', {
       type        : 'fade',
       rewind      : true,
       pagination  : true,
@@ -148,19 +148,17 @@ document.addEventListener( 'DOMContentLoaded', function () {
   }
 
   function animateSlideElements(slide) {
+    var img = slide.querySelector('.animate-img');
     var h1 = slide.querySelector('.animate-h1');
     var p = slide.querySelector('.animate-p');
-    var img = slide.querySelector('.animate-img');
-    var h5 = slide.querySelector('.animate-h5');
     var button = slide.querySelector('.animate-button');
     var icon = slide.querySelector('.animate-icon');
 
+    animateElement(img, 250); // 1.25 segundos después
     animateElement(icon, 500); // 0.5 segundos después (borde)
     animateElement(h1, 750); // 0.75 segundos después
     animateElement(p, 1000); // 1 segundo después
-    animateElement(img, 1250); // 1.25 segundos después
-    animateElement(h5, 1500); // 1.5 segundos después (texto dentro del borde)
-    animateElement(button, 1750); // 1.75 segundos después
+    animateElement(button, 1250); // 1.75 segundos después
   }
 
   function animateSlideOutElements(slide) {

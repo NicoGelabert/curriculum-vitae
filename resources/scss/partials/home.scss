@@ -1,29 +1,41 @@
 .home-hero-banner{
-    @apply flex items-center justify-evenly text-black;
-    i{
-        @apply text-3xl leading-none;
-    }
-    hr{
-        @apply border-t-2 border-black dark:border-white;
-    }
-    img{
-        @apply w-auto;
-    }
-    .vertical-text{
-        writing-mode: vertical-lr;
-    }
-    .splide__pagination{
-        @apply absolute bottom-8 gap-1;
-        .splide__pagination__page{
-            @apply bg-white w-2 h-2;
-            border-radius:20px;
-            cursor:pointer;
-            transition:0.3s ease width;
-
+    .home-hero-banner-content{
+        @apply flex items-center justify-evenly text-black dark:text-white;
+        hr{
+            @apply border-t-2 border-black dark:border-white;
         }
-        .splide__pagination__page.is-active{
-            @apply bg-primary_light scale-100 w-4;
+        img{
+            @apply w-auto;
         }
+        .vertical-text{
+            writing-mode: vertical-lr;
+        }
+        .splide__pagination{
+            @apply absolute -bottom-12 gap-1;
+            .splide__pagination__page{
+                @apply bg-white w-2 h-2;
+                border-radius:20px;
+                cursor:pointer;
+                transition:0.3s ease width;
+    
+            }
+            .splide__pagination__page.is-active{
+                @apply bg-primary_light dark:bg-primary_dark scale-100 w-4;
+            }
+        }
+    }
+    .toggle-theme{
+        i::before{
+            @apply leading-[1.6rem];
+        }
+    }
+    .indicator {
+        left:0.125rem;
+        transform: translateY(-50%);
+        transition: transform 0.3s ease; /* Agregar transición para el cambio de posición */
+    }
+    .dark .indicator {
+        transform: translateY(50%); /* Mover el indicador al lado derecho en el modo oscuro */
     }
 }
 #services{

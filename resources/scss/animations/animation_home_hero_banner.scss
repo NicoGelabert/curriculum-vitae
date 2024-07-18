@@ -12,7 +12,6 @@
 .animate-h1,
 .animate-p,
 .animate-img,
-.animate-h5,
 .animate-button,
 .animate-icon,
 .animate-service-item {
@@ -21,31 +20,18 @@
     transition: all 0.6s ease-in-out;
 }
 
-.animate-img {
-    transform: translateX(100%); /* Trasladar hacia la derecha para la animación de la imagen */
-}
-
-.animate-h5 {
-    transform: translateY(20px);
-}
-
 .animate-button {
     transform: translateY(20px);
 }
 
+.animate-img.active,
 .animate-h1.active,
 .animate-p.active,
-.animate-h5.active,
 .animate-button.active,
 .animate-icon.active,
 .animate-service-item.active {
     opacity: 1;
     transform: translateY(0);
-}
-
-.animate-img.active {
-    opacity: 1;
-    transform: translateX(0);
 }
 /* Animación de la flecha */
 .animate-arrow {
