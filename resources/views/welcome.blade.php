@@ -4,12 +4,16 @@
 
     <hr class="divider" id="servicios"/>
     
-    <x-services :services="$services"/>
+    <x-experiences :experiences="$experiences"/>
+    
+    <hr class="divider" id="about"/>
+
+    <x-educations :educations="$educations"/>
     
     <hr class="divider" id="about"/>
     <!-- <x-benefits /> -->
     
-    <x-features :features="$features"/>
+    <!-- <x-features :features="$features"/> -->
         
     <hr class="divider" id="zona-de-cobertura" />
 

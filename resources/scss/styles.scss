@@ -21,7 +21,7 @@ body{
         @apply text-xl font-bold;
     }
     h5{
-        @apply text-3xl;
+        @apply text-xl md:text-2xl;
     }
     h6{
         @apply text-lg;
@@ -153,5 +153,13 @@ body{
         a{
             @apply aspect-square md:aspect-auto rounded-md flex justify-center items-center hover:bg-primary_light hover:text-white dark:hover:bg-primary_dark dark:hover:text-black transition-all;
         }
+    }
+    // Línea de progreso de slider vertical
+    .my-slider-progress {
+        @apply bg-gray_primary dark:bg-black_light;
+    }
+    .my-slider-progress-bar {
+        @apply bg-primary_light dark:bg-primary_dark h-0.5 w-0;
+        transition: width 400ms ease;
     }
 }

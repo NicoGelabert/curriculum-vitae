@@ -167,39 +167,64 @@ document.addEventListener( 'DOMContentLoaded', function () {
       element.classList.remove('active');
     });
   }
+// Experience
+  var experiences = new Splide( '#experiences', {
+    perPage     : 1,
+    height      : '20rem',
+    direction   : 'ttb',
+    arrows      : false,
+    pagination  : false,
+    wheel       : true,
+    gap         : '10rem',
+    breakpoints : {
+      480 : {
+        height      : '40rem',
+        perPage     : 1,
+        direction   : 'ltr',
+        wheel       : false,
+      }
+    }
+  });
+  var bar_ex = experiences.root.querySelector( '.my-slider-progress-bar' );
+  experiences.on( 'mounted move', function () {
+    var end  = experiences.Components.Controller.getEnd() + 1;
+    var rate = Math.min( ( experiences.index + 1 ) / end, 1 );
+    bar_ex.style.width = String( 100 * rate ) + '%';
+  } );
+  experiences.mount();
+  
+// Experience
+
+// Education
+var education = new Splide( '#education', {
+  perPage     : 1,
+  height      : '20rem',
+  direction   : 'ttb',
+  arrows      : false,
+  pagination  : false,
+  wheel       : true,
+  gap         : '10rem',
+  breakpoints : {
+    480 : {
+      height      : '30rem',
+      perPage     : 1,
+      direction   : 'ltr',
+      wheel       : false,
+    }
+  }
+});
+var bar_ed = education.root.querySelector( '.my-slider-progress-bar' );
+education.on( 'mounted move', function () {
+  var end  = education.Components.Controller.getEnd() + 1;
+  var rate = Math.min( ( education.index + 1 ) / end, 1 );
+  bar_ed.style.width = String( 100 * rate ) + '%';
+} );
+education.mount();
+
+// Education
+
 });
   // Fin Home Hero Banner
-  // Services home
-  document.addEventListener( 'DOMContentLoaded', function () {
-  var servicesAttributes = new Splide( '#servicesAttributes', {
-    type       : 'fade',
-    heightRatio: 0.5,
-    pagination : false,
-    arrows     : false,
-    cover      : true,
-    breakpoints     : {
-      480 : {
-        fixedHeight: '100%',
-      },
-    }
-  } );
-  
-  var btnService = new Splide( '#btnService', {
-    rewind          : true,
-    isNavigation    : true,
-    gap             : 10,
-    focus           : 'center',
-    pagination      : false,
-    arrows          : false,
-    cover           : true,
-  });
-  
-  servicesAttributes.sync( btnService );
-  servicesAttributes.mount();
-  btnService.mount();
-});
-// Fin Services Home
-  
 
 // Service galery
 if (document.querySelector('#service_gallery')) {

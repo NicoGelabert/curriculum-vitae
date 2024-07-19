@@ -38,8 +38,13 @@
         transform: translateY(50%); /* Mover el indicador al lado derecho en el modo oscuro */
     }
 }
-#services{
-    @apply my-16;
+#experiences, #education{
+    .vertical-text{
+        @apply md:rotate-180;
+        @media (min-width: 768px) {
+            writing-mode: vertical-rl;
+          }
+    }
 }
 //Cobertura
 .cobertura{
