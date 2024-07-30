@@ -1,6 +1,6 @@
 <template>
     <header class="flex justify-between items-center p-3 h-14 shadow bg-white">
-        <Logo class="block h-12 w-auto fill-black" />
+        <Logo class="block h-12 w-auto fill-black py-2" />
         
         <Menu as="div" class="relative inline-block text-left">
             <MenuButton class="flex items-center" @click="toggleChevronDownIcon()">

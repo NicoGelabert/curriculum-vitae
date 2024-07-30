@@ -91,15 +91,6 @@ document.addEventListener("alpine:init", async () => {
     };
   });
   
-  Alpine.data('lightbox', () => ({
-    isOpen: false,
-    imageUrl: '',
-    openLightbox(url) {
-        this.imageUrl = url;
-        this.isOpen = true;
-    }
-  }))
-  
 });
 
 Alpine.start();
@@ -110,10 +101,28 @@ function toggleTheme() {
   toggleThemeButtons.forEach(button => {
     button.classList.toggle('dark');
   });
+
+  if (document.documentElement.classList.contains('dark')) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
+
 }
 toggleThemeButtons.forEach(button => {
   button.addEventListener('click', toggleTheme);
 });
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const savedTheme = localStorage.getItem('theme');
+
+//   if (savedTheme === 'dark') {
+//     document.documentElement.classList.add('dark');
+//     toggleThemeButtons.forEach(button => {
+//       button.classList.add('dark');
+//     });
+//   }
+// });
 // dark mode
 
 // SPLIDE
@@ -167,6 +176,8 @@ document.addEventListener( 'DOMContentLoaded', function () {
       element.classList.remove('active');
     });
   }
+// Fin Home Hero Banner
+
 // Experience
   var experiences = new Splide( '#experiences', {
     perPage     : 1,
@@ -192,7 +203,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
     bar_ex.style.width = String( 100 * rate ) + '%';
   } );
   experiences.mount();
-  
 // Experience
 
 // Education
@@ -220,26 +230,32 @@ education.on( 'mounted move', function () {
   bar_ed.style.width = String( 100 * rate ) + '%';
 } );
 education.mount();
+// Educationç
 
-// Education
+// Skills
+var skills = new Splide('#skills', {
+  type        : 'loop',
+  drag        : 'free',
+  focus       : 'center',
+  perPage     : 3,
+  width       : 'auto',
+  autoScroll  : {
+    speed: 1,
+  },
+});
+
+skills.mount( { AutoScroll } );
+//Skills
 
 });
-  // Fin Home Hero Banner
+
 
 // Service galery
-if (document.querySelector('#service_gallery')) {
-  var servicegallery = new Splide('#service_gallery', {
-    type        : 'loop',
-    drag        : 'free',
-    focus       : 'center',
-    arrows      : false,
-    pagination  : false,
-    fixedWidth  : 300,
-    autoScroll  : {
-      speed     : 1,
-    },
-  });
+// if (document.querySelector('#service_gallery')) {
+//   var servicegallery = new Splide('#service_gallery', {
+//     type        : 'loop',
+//   });
 
-  servicegallery.mount({ AutoScroll });
-}
+//   servicegallery.mount({ AutoScroll });
+// }
 // Fin Service galery

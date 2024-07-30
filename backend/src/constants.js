@@ -1,4 +1,5 @@
 export const HOMEHEROBANNERS_PER_PAGE = 10
+export const SKILLS_PER_PAGE = 10
 export const CATEGORIES_PER_PAGE = 10
 export const FEATURES_PER_PAGE = 10
 export const FAQS_PER_PAGE = 10

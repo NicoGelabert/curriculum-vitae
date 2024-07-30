@@ -29,6 +29,23 @@ export function setHomeHeroBanners(state, [loading, data = null]) {
   state.homeHeroBanners.loading = loading;
 }
 
+export function setSkills(state, [loading, data = null]) {
+
+  if (data) {
+    state.skills = {
+      ...state.skills,
+      data: data.data,
+      links: data.meta?.links,
+      page: data.meta.current_page,
+      limit: data.meta.per_page,
+      from: data.meta.from,
+      to: data.meta.to,
+      total: data.meta.total,
+    }
+  }
+  state.skills.loading = loading;
+}
+
 export function setCategories(state, [loading, data = null]) {
 
   if (data) {

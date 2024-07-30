@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\HomeHeroBanner;
 use App\Models\Experience;
 use App\Models\Education;
+use App\Models\Skill;
 use App\Models\Feature;
 use App\Models\Service;
 use App\Models\Project;
@@ -19,6 +20,7 @@ class WelcomeController extends Controller
         $homeherobanners = HomeHeroBanner::all();
         $experiences = Experience::all();
         $educations = Education::all();
+        $skills = Skill::all();
         $features = Feature::all();
         $services = Service::all();
         $clients = Client::all();
@@ -28,6 +30,7 @@ class WelcomeController extends Controller
             'homeherobanners',
             'experiences',
             'educations',
+            'skills',
             'features',
             'services',
             'clients',

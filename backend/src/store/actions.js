@@ -119,6 +119,64 @@ export function deleteHomeHeroBanner({commit}, id) {
   return axiosClient.delete(`/homeherobanners/${id}`)
 }
 
+// Skills
+export function getSkills({commit, state}, {url = null, search = '', per_page, sort_field, sort_direction} = {}) {
+  commit('setSkills', [true])
+  url = url || '/skills'
+  const params = {
+    per_page: state.skills.limit,
+  }
+  return axiosClient.get(url, {
+    params: {
+      ...params,
+      search, per_page, sort_field, sort_direction
+    }
+  })
+    .then((response) => {
+      commit('setSkills', [false, response.data])
+    })
+    .catch(() => {
+      commit('setSkills', [false])
+    })
+}
+
+export function getSkill({commit}, id) {
+  return axiosClient.get(`/skills/${id}`)
+}
+
+export function createSkill({commit}, skill) {
+  if (skill.image instanceof File) {
+    const form = new FormData();
+    form.append('image', skill.image);
+    form.append('name', skill.name);
+    form.append('published', skill.published ? 1 : 0);
+    skill = form;
+  }
+  return axiosClient.post('/skills', skill)
+}
+
+export function updateSkill({commit}, skill) {
+  const id = skill.id
+  if (skill.image instanceof File) {
+    const form = new FormData();
+    form.append('id', skill.id);
+    form.append('image', skill.image);
+    form.append('name', skill.name);
+    form.append('published', skill.published ? 1 : 0);
+    form.append('_method', 'PUT');
+    skill = form;
+  } else {
+    skill._method = 'PUT'
+  }
+  return axiosClient.post(`/skills/${id}`, skill)
+}
+
+export function deleteSkill({commit}, id) {
+  return axiosClient.delete(`/skills/${id}`)
+}
+
+// Skills
+
 // CATEGORIES
 export function getCategories({commit, state}, {sort_field, sort_direction} = {}) {
   commit('setCategories', [true])

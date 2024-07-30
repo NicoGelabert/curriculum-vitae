@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Api\HomeHeroBannerController;
+use App\Http\Controllers\Api\SkillController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\AlergenController;
@@ -34,6 +35,7 @@ Route::middleware(['auth:sanctum', 'admin'])->group(function () {
     Route::post('/logout', [\App\Http\Controllers\Api\AuthController::class, 'logout']);
 
     Route::apiResource('homeherobanners', HomeHeroBannerController::class);
+    Route::apiResource('skills', SkillController::class);
     Route::apiResource('categories', CategoryController::class)->except('show');
     Route::get('/categories/tree', [CategoryController::class, 'getAsTree']);
     Route::apiResource('products', ProductController::class);

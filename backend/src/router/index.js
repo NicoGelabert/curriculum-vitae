@@ -7,6 +7,7 @@ import AppLayout from '../components/AppLayout.vue'
 import store from "../store";
 import NotFound from "../views/NotFound.vue";
 import HomeHeroBanners from "../views/HomeHeroBanners/HomeHeroBanners.vue";
+import Skills from "../views/Skills/Skills.vue";
 import Categories from "../views/Categories/Categories.vue";
 import Products from "../views/Products/Products.vue";
 import ProductView from "../views/Products/ProductView.vue";
@@ -51,6 +52,11 @@ const routes = [
         path: 'homeherobanners',
         name: 'app.homeherobanners',
         component: HomeHeroBanners
+      },
+      {
+        path: 'skills',
+        name: 'app.skills',
+        component: Skills
       },
       {
         path: 'categories',

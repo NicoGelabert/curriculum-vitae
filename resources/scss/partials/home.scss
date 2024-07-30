@@ -38,12 +38,37 @@
         transform: translateY(50%); /* Mover el indicador al lado derecho en el modo oscuro */
     }
 }
-#experiences, #education{
+#experiences, #education, #skills{
     .vertical-text{
         @apply md:rotate-180;
         @media (min-width: 768px) {
             writing-mode: vertical-rl;
           }
+    }
+}
+#skills{
+    .splide__slide{
+        @apply flex flex-col items-center justify-between bg-white hover:scale-125 my-12 py-12 relative overflow-hidden;
+        .splide__slide_img{
+            @apply h-full flex items-center mix-blend-luminosity hover:mix-blend-normal;
+            transition: transform .2s ease-in-out;
+            img{
+                @apply max-w-20;
+            }
+        }
+        p{
+            @apply absolute bottom-0 w-full text-center;
+            transform: translateY(100%);
+            transition: transform .3s ease-in-out;
+        }
+        &:hover{
+            .splide__slide_img {
+                transform: translateY(-10%); /* Mueve la imagen un poco hacia arriba */
+            }
+            p{
+                transform: translateY(-100%);
+            }
+        } 
     }
 }
 //Cobertura

@@ -9,13 +9,12 @@
     <hr class="divider" id="about"/>
 
     <x-educations :educations="$educations"/>
-    
-    <hr class="divider" id="about"/>
+
+    <x-skills :skills="$skills"/>
+
     <!-- <x-benefits /> -->
     
     <!-- <x-features :features="$features"/> -->
-        
-    <hr class="divider" id="zona-de-cobertura" />
 
     <x-coverage/>
     
