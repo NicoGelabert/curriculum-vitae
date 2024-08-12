@@ -1,6 +1,6 @@
 <footer>
     <div class="footer-container">
-        <div class="flex flex-col items-center md:items-start gap-y-4">
+        <div class="flex flex-col items-center gap-y-4">
             <div class="logo footer-logo">
                 <x-application-logo />
                 <x-social-icons />
@@ -9,10 +9,16 @@
         </div>
         <div class="footer-menu">
             <div>
-                <h6>{{ __('Servicios') }}</h6>
+                <h6>{{ __('Experiencia') }}</h6>
             </div>
             <div>
-                <h6>{{ __('Sobre Nosotros') }}</h6>
+                <h6>{{ __('Educación') }}</h6>
+            </div>
+            <div>
+                <h6>{{ __('Skills') }}</h6>
+            </div>
+            <div>
+                <h6>{{ __('Portfolio') }}</h6>
             </div>
             <div>
                 <h6>{{ __('Contacto') }}</h6>

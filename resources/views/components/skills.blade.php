@@ -1,4 +1,4 @@
-<section class="container flex flex-col md:flex-row items-center gap-8" aria-label="Skills">
+<section class="container flex flex-col md:flex-row items-center gap-4" id="skills-container" aria-label="Skills">
     <div class="h-fit vertical-text">
         <h3>Skills</h3>
     </div>

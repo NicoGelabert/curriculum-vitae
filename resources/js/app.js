@@ -113,16 +113,16 @@ toggleThemeButtons.forEach(button => {
   button.addEventListener('click', toggleTheme);
 });
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   const savedTheme = localStorage.getItem('theme');
+document.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
 
-//   if (savedTheme === 'dark') {
-//     document.documentElement.classList.add('dark');
-//     toggleThemeButtons.forEach(button => {
-//       button.classList.add('dark');
-//     });
-//   }
-// });
+  if (savedTheme === 'dark') {
+    document.documentElement.classList.add('dark');
+    toggleThemeButtons.forEach(button => {
+      button.classList.add('dark');
+    });
+  }
+});
 // dark mode
 
 // SPLIDE
@@ -183,7 +183,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
     perPage     : 1,
     height      : '20rem',
     direction   : 'ttb',
-    arrows      : false,
+    arrows      : true,
     pagination  : false,
     wheel       : true,
     gap         : '10rem',
@@ -210,7 +210,7 @@ var education = new Splide( '#education', {
   perPage     : 1,
   height      : '20rem',
   direction   : 'ttb',
-  arrows      : false,
+  arrows      : true,
   pagination  : false,
   wheel       : true,
   gap         : '10rem',
@@ -235,10 +235,12 @@ education.mount();
 // Skills
 var skills = new Splide('#skills', {
   type        : 'loop',
+  perPage     : 6,
   drag        : 'free',
+  pagination  : false,
+  arrows      : false,
+  width       : '95%',
   focus       : 'center',
-  perPage     : 3,
-  width       : 'auto',
   autoScroll  : {
     speed: 1,
   },

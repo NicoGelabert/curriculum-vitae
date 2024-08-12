@@ -58,6 +58,10 @@
                 </li>
                 <li class="relative text-xl" @click="mobileMenuOpen = false">
                     <a href="#about">
+                        {{ __('Skills') }}
+                    </a>
+                </li><li class="relative text-xl" @click="mobileMenuOpen = false">
+                    <a href="#about">
                         {{ __('Portfolio') }}
                     </a>
                 </li>
@@ -160,8 +164,8 @@
                     class="cursor-pointer flex items-center px-navbar-item w-max"
                 > -->
                 <a href="#servicios" class="cursor-pointer flex items-center px-navbar-item w-max">
-                <i class="fi fi-rr-tools pr-2"></i>
-                {{ __('Servicios') }}
+                <i class="fi fi-sr-display-code pr-2"></i>
+                {{ __('Experiencia') }}
                 <!-- <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-5 w-5"
@@ -191,13 +195,31 @@
                     @endforeach
                 </ul> -->
             </li>
-            <!-- Sobre Nosotros -->
+            <!-- Educación -->
             <li class="relative">
                 <a href="#about"
                     class="cursor-pointer flex items-center px-navbar-item w-max"
                 >
-                    <i class="fi fi-rr-user-helmet-safety pr-2"></i>
-                    {{ __('Sobre Nosotros') }}
+                    <i class="fi fi-sr-diploma pr-2"></i>
+                    {{ __('Educación') }}
+                </a>
+            </li>
+            <!-- Educación -->
+            <li class="relative">
+                <a href="#about"
+                    class="cursor-pointer flex items-center px-navbar-item w-max"
+                >
+                    <i class="fi fi-sr-settings-sliders pr-2"></i>
+                    {{ __('Skills') }}
+                </a>
+            </li>
+            <!-- Educación -->
+            <li class="relative">
+                <a href="#about"
+                    class="cursor-pointer flex items-center px-navbar-item w-max"
+                >
+                    <i class="fi fi-sr-customize-computer pr-2"></i>
+                    {{ __('Portfolio') }}
                 </a>
             </li>
             <!-- Contacto -->
@@ -205,7 +227,7 @@
                 <a href="#contact"
                     class="cursor-pointer flex items-center px-navbar-item w-max"
                 >
-                    <i class="fi fi-rr-envelope-dot pr-2"></i>
+                    <i class="fi fi-sr-attribution-pencil pr-2"></i>
                     {{ __('Contacto') }}
                 </a>
             </li>

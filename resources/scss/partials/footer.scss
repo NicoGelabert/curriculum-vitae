@@ -1,7 +1,7 @@
 footer{
-    @apply bg-primary_light text-white dark:bg-primary_dark dark:text-black;
+    @apply bg-black text-white dark:bg-white dark:text-black;
     .footer-container{
-        @apply max-w-screen-xl mx-auto flex flex-col items-center gap-y-8 py-12 px-4 md:flex-row md:justify-between;
+        @apply max-w-screen-xl mx-auto flex flex-col items-center gap-y-8 py-12 px-4;
         .footer-logo{
             @apply flex flex-col gap-4 max-w-none;
             svg{

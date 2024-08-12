@@ -16,7 +16,7 @@
     
     <!-- <x-features :features="$features"/> -->
 
-    <x-coverage/>
+    <!-- <x-coverage/> -->
     
     <hr class="divider" />
     
