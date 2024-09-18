@@ -9,19 +9,29 @@
         </div>
         <div class="footer-menu">
             <div>
-                <h6>{{ __('Experiencia') }}</h6>
+                <a href="#experiencia">
+                    <h6>{{ __('Experiencia') }}</h6>
+                </a>
             </div>
             <div>
-                <h6>{{ __('Educación') }}</h6>
+                <a href="#aducacion">
+                    <h6>{{ __('Educación') }}</h6>
+                </a>
             </div>
             <div>
-                <h6>{{ __('Skills') }}</h6>
+                <a href="#habilidades">
+                    <h6>{{ __('Skills') }}</h6>
+                </a>
             </div>
             <div>
-                <h6>{{ __('Portfolio') }}</h6>
+                <a href="#portfolio">
+                    <h6>{{ __('Portfolio') }}</h6>
+                </a>
             </div>
             <div>
-                <h6>{{ __('Contacto') }}</h6>
+                <a href="#contact">
+                    <h6>{{ __('Contacto') }}</h6>
+                </a>
             </div>
         </div>
     </div>

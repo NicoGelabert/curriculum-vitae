@@ -1,11 +1,20 @@
-<div  {{ $attributes->merge(['class' => 'flex justify-between gap-4 social-icons']) }}>
-    <a  class="h-6 w-6 aspect-square rounded-md bg-black/5 dark:bg-white/5 p-2 ring-1 ring-black/10 dark:ring-white/10" href="https://wa.me/34615338966" target="_blank">
+<div  {{ $attributes->merge(['class' => 'flex justify-evenly gap-4 social-icons']) }}>
+    <a href="https://wa.me/34623037048" class="h-6 w-6 aspect-square rounded-md p-2" target="_blank">
         <i class="flex text-base leading-none fi fi-brands-whatsapp"></i>
     </a>
-    <a  class="h-6 w-6 aspect-square rounded-md bg-black/5 dark:bg-white/5 p-2 ring-1 ring-black/10 dark:ring-white/10" href="https://www.instagram.com/urquizasoluciones/?hl=es-es" target="_blank">
+    <a href="mailto:nico.gelabert@gmail.com" class="h-6 w-6 aspect-square rounded-md p-2" target="_blank">
+        <i class="flex text-base leading-none fi fi-rr-envelope"></i>
+    </a>
+    <a href="https://github.com/NicoGelabert" class="h-6 w-6 aspect-square rounded-md p-2">
+        <i class="flex text-base leading-none fi fi-brands-github"></i>
+    </a>
+    <a href="https://www.behance.net/nicolasgelabert" class="h-6 w-6 aspect-square rounded-md p-2" target="_blank">
+        <i class="flex text-base leading-none fi fi-brands-behance"></i>
+    </a>
+    <a href="https://www.instagram.com/nicolas.gelabert.dg/" class="h-6 w-6 aspect-square rounded-md p-2" target="_blank">
         <i class="flex text-base leading-none fi fi-brands-instagram"></i>
     </a>
-    <a  class="h-6 w-6 aspect-square rounded-md bg-black/5 dark:bg-white/5 p-2 ring-1 ring-black/10 dark:ring-white/10" href="https://maps.app.goo.gl/22GUnZ2foJeEYud98" target="_blank">
-        <i class="flex text-base leading-none fi fi-rs-map-marker"></i>
+    <a href="https://www.linkedin.com/in/nicolasgelabert/" class="h-6 w-6 aspect-square rounded-md p-2">
+        <i class="flex text-base leading-none fi fi-brands-linkedin"></i>
     </a>
 </div>

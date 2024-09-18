@@ -61,7 +61,7 @@
                         {{ __('Skills') }}
                     </a>
                 </li><li class="relative text-xl" @click="mobileMenuOpen = false">
-                    <a href="#about">
+                    <a href="#portfolio">
                         {{ __('Portfolio') }}
                     </a>
                 </li>
@@ -164,20 +164,20 @@
                     class="cursor-pointer flex items-center px-navbar-item w-max"
                 > -->
                 <a href="#experiencia" class="cursor-pointer flex items-center px-navbar-item w-max">
-                <i class="fi fi-sr-display-code pr-2"></i>
-                {{ __('Experiencia') }}
-                <!-- <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                >
-                    <path
-                        fill-rule="evenodd"
-                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
-                    />
-                </svg> -->
+                    <i class="fi fi-sr-display-code pr-2"></i>
+                    {{ __('Experiencia') }}
+                    <!-- <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                        />
+                    </svg> -->
                 </a>
                 <!-- <ul
                     @click.outside="open = false"
@@ -215,7 +215,7 @@
             </li>
             <!-- Educación -->
             <li class="relative">
-                <a href="#about"
+                <a href="#portfolio"
                     class="cursor-pointer flex items-center px-navbar-item w-max"
                 >
                     <i class="fi fi-sr-customize-computer pr-2"></i>

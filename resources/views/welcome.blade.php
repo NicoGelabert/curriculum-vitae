@@ -20,7 +20,7 @@
 
     <!-- <x-coverage/> -->
     
-    <hr class="my-8 opacity-0" id="portfolio"/>
+    <hr class="mt-8 mb-16 opacity-0" id="portfolio"/>
     
     <x-portfolio :projects="$projects" />
     
@@ -30,7 +30,7 @@
     
     <!-- <x-faq :faqs="$faqs"/> -->
     
-    <hr class="divider" id="contact"/>
+    <hr class="mt-8 mb-16 opacity-0" id="contact"/>
 
     <x-contact />
 

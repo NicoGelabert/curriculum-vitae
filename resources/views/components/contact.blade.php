@@ -2,7 +2,7 @@
     <div class="w-full flex flex-col md:w-1/2 gap-8">
         <h3 class="text-left">{{ __('Contacto')}}</h3>
         <div class="flex flex-col justify-between items-start gap-8">
-            <p class="text-lg leading-8 text-gray-500">{{ __('Si tiene más consultas, no dude en ponerse en contacto con nosotros.') }}</p>
+            <p class="text-lg leading-8 text-gray-500">{{ __('Si tiene más consultas, no dude en ponerse en contacto.') }}</p>
             <x-social-icons />
         </div>
     </div>
@@ -24,7 +24,7 @@
                     <option value="Calahonda">Calahonda</option>
                     <option value="Marbella">Marbella</option>
                 </select>
-                <textarea id="messageInput" name="message" placeholder="{{__('Déjenos un mensaje') }}" rows="4" required class="account w-full"></textarea>
+                <textarea id="messageInput" name="message" placeholder="{{__('Deje un mensaje') }}" rows="4" required class="account w-full"></textarea>
                 <div class="g-recaptcha" data-sitekey="6LcjHtMpAAAAAII4PAM3Vh2hT-0RDntu6B-3a_pH"></div>
                 <x-button id="subscribeBtn" type="submit">{{__('Enviar')}}</x-button>
             </div>
