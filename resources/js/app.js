@@ -213,7 +213,6 @@ var education = new Splide( '#education', {
   arrows      : true,
   pagination  : false,
   wheel       : true,
-  gap         : '10rem',
   breakpoints : {
     480 : {
       height      : '30rem',
@@ -230,7 +229,7 @@ education.on( 'mounted move', function () {
   bar_ed.style.width = String( 100 * rate ) + '%';
 } );
 education.mount();
-// Educationç
+// Education
 
 // Skills
 var skills = new Splide('#skills', {
@@ -244,10 +243,66 @@ var skills = new Splide('#skills', {
   autoScroll  : {
     speed: 1,
   },
+  breakpoints : {
+    480 : {
+      perPage : 3,
+    }
+  }
 });
 
 skills.mount( { AutoScroll } );
 //Skills
+
+// Portfolio
+var main = new Splide( '#main-carousel', {
+  type      : 'fade',
+  rewind    : true,
+  pagination: true,
+  arrows    : true,
+});
+
+var thumbnails = new Splide( '#thumbnail-carousel', {
+  type        : 'loop',
+  perPage     : 3,
+  gap         : 10,
+  rewind      : true,
+  pagination  : false,
+  arrows      : false,
+  isNavigation: true,
+});
+
+main.sync( thumbnails );
+main.mount();
+thumbnails.mount();
+
+thumbnails.on('mounted', function(){
+  limitPaginationDots(thumbnails);
+})
+
+function limitPaginationDots(thumbnails) {
+  const maxDots = 5;
+  const pagination = thumbnails.Components.Pagination;
+  const dots = pagination.data.list.childNodes;
+
+  if (dots.length > maxDots) {
+    const step = Math.ceil(dots.length / maxDots);
+    const newDots = [];
+
+    for (let i = 0; i < maxDots; i++) {
+      const dotIndex = i * step;
+      newDots.push(dots[dotIndex]);
+    }
+
+    // Clear existing dots
+    pagination.data.list.innerHTML = '';
+
+    // Append limited dots
+    newDots.forEach(dot => {
+      pagination.data.list.appendChild(dot);
+    });
+  }
+}
+// Fin Portfolio
 
 });
 

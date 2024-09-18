@@ -38,7 +38,7 @@
         transform: translateY(50%); /* Mover el indicador al lado derecho en el modo oscuro */
     }
 }
-#experiences, #education, #skills-container{
+#experiences, #education, #skills-container, #portfolio{
     .vertical-text{
         @apply md:rotate-180;
         @media (min-width: 768px) {
@@ -46,13 +46,16 @@
           }
     }
 }
-#experiences, #education{
+#experiences, #education, #portfolio{
     .splide__arrow{
-        @apply left-[85%];
+        @apply md:left-[85%];
         transform: translate(0);
     }
     .splide__arrow--next{
-        @apply top-[1em] ml-12;
+        @apply top-2 md:top-[1em] ml-12;
+    }
+    .splide__arrow--prev{
+        @apply top-2 md:top-[1em] ml-72 md:ml-0;
     }
     .splide__arrow--next, .splide__arrow--prev{
         @apply hover:bg-primary_light dark:hover:bg-primary_dark;

@@ -44,7 +44,7 @@
                                 <h1 class="animate-h1 text-4xl md:text-6xl leading-tight font-bold">{{ __($homeherobanner->headline) }}</h1>
                                 <p class="animate-p">{{ __($homeherobanner->description) }}</p>
                                 <div class="animate-button flex gap-4">
-                                    <x-button href="#contact"><p>{{ __('Ver Portfolio') }}</p></x-button>
+                                    <x-button href="#portfolio"><p>{{ __('Ver Portfolio') }}</p></x-button>
                                 </div>
                             </div>
                             <div class="w-full md:w-1/2 flex items-center">

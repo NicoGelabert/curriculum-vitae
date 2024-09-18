@@ -1,45 +1,59 @@
 #portfolio{
-    @apply h-screen;
     #main-carousel{
-        @apply w-full;
         .splide__slide img {
-            @apply h-screen md:h-full;
-            object-fit: cover;
-            width: 100%;
+            @apply w-auto max-h-[420px];
         }
-        .splide__slide::before{
-            @apply h-full left-0 top-0 absolute w-full bg-black/70 transition-colors;
-            content:"";
+        .splide__arrows{
+            .splide__arrow--prev, .splide__arrow--next{
+                @apply top-0;
+            }
+        }
+        .splide__pagination{
+            @apply gap-1 md:hidden;
+            .splide__pagination__page{
+                @apply bg-[#D9D9D9] w-2 h-2;
+                border-radius:10px;
+                cursor:pointer;
+                transition:0.3s ease width;
+    
+            }
+            .splide__pagination__page.is-active{
+                @apply bg-primary_light dark:bg-primary_dark scale-100 w-4;
+                ;
+            }
         }
     }
     #thumbnail-carousel{
-        @apply w-full h-full absolute top-0 md:top-1/2 md:-translate-y-1/2;
         .splide__slide {
-            @appy h-auto max-h-[75%];
             img {
-                @apply max-w-[350px] max-h-[400px] lg:max-h-96 lg:max-w-96;
-                height: auto;
-                object-fit: cover;
-                width: auto;
+                @apply h-auto object-cover w-auto;
             }
         }
         .splide__slide {
-            @apply h-auto md:h-[500px];
+            @apply h-auto;
             opacity: 0.6;
             width: auto;
         }
         .splide__slide.is-active {
-            @apply h-auto md:h-[500px];
+            @apply h-auto;
             opacity: 1;
             width: auto;
         }
         .splide__track--nav>.splide__list>.splide__slide.is-active{
             border:none;
         }
-        .splide__arrows{
-            @apply absolute w-full bottom-8 flex justify-center gap-12;
-            .splide__arrow{
-                @apply relative left-0 translate-y-0 bg-white opacity-100;
+        .splide__pagination{
+            @apply gap-1 -bottom-8 md:bottom-2;
+            .splide__pagination__page{
+                @apply bg-[#D9D9D9] w-2 h-2;
+                border-radius:10px;
+                cursor:pointer;
+                transition:0.3s ease width;
+    
+            }
+            .splide__pagination__page.is-active{
+                @apply bg-primary_light dark:bg-primary_dark scale-100 w-4;
+                ;
             }
         }
     }

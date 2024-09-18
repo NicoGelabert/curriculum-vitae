@@ -145,7 +145,7 @@ body{
     }
     // línea divisoria
     .divider{ 
-        @apply h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-0 dark:via-white my-8 md:my-16;
+        @apply h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-0 dark:via-white my-16 md:mb-32;
     }
     // Social icons
     .social-icons{

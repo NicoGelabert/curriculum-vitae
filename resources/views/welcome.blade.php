@@ -2,13 +2,15 @@
 
     <x-home-hero-banner :homeherobanners="$homeherobanners" />
 
-    <hr class="divider" id="servicios"/>
+    <hr class="divider" id="experiencia"/>
     
     <x-experiences :experiences="$experiences"/>
     
-    <hr class="divider" id="about"/>
+    <hr class="divider" id="educacion"/>
 
     <x-educations :educations="$educations"/>
+
+    <hr class="opacity-0" id="habilidades"/>
 
     <x-skills :skills="$skills"/>
 
@@ -18,15 +20,15 @@
 
     <!-- <x-coverage/> -->
     
-    <hr class="divider" />
+    <hr class="my-8 opacity-0" id="portfolio"/>
     
-    <!-- <x-portfolio :projects="$projects" /> -->
+    <x-portfolio :projects="$projects" />
     
     <!-- <x-clients :clients="$clients" /> -->
     
     <!-- <hr class="divider" /> -->
     
-    <x-faq :faqs="$faqs"/>
+    <!-- <x-faq :faqs="$faqs"/> -->
     
     <hr class="divider" id="contact"/>
 

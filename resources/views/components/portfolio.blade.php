@@ -1,4 +1,52 @@
-<div class="flex flex-col gap-12">
+<div class="container flex flex-col md:flex-row" id="portfolio">
+    <div class="h-fit vertical-text md:w-1/12">
+        <h3>Portfolio</h3>
+    </div>
+    <div class="relative w-full md:w-11/12">
+        <div id="main-carousel" class="splide" aria-label="Portfolio">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    @foreach($projects as $project)
+                    <li class="splide__slide flex">
+                        <div class="w-1/2 flex justify-center pr-4">
+                            <img src="{{ $project->image }}" alt="{{ $project->name }}" class="h-fit">
+                        </div>
+                        <div class="flex flex-col gap-4 w-1/2">
+                            <div class="flex justify-between">
+                                <h5>{{ $project->title }}</h5>
+                            </div>
+                            <ul>
+                                @foreach($project->clients as $client)
+                                <li class="">{{ $client->name }}</li>
+                                @endforeach
+                            </ul>
+                            <ul class="hidden md:flex flex-wrap gap-2">
+                                @foreach($project->tags as $tag)
+                                <li class="mt-1 bg-gray-50 text-xs w-fit rounded-full px-2 py-1 text-black dark:bg-black_light dark:text-gray_primary">{{ $tag->name }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+        <div id="thumbnail-carousel" class="splide absolute bottom-0 right-0 w-1/2" aria-label="Puede ver todos nuestros trabajos.">
+            <div class="splide__track">
+                <div class="splide__list">
+                    @foreach($projects as $project)
+                        <li class="splide__slide">
+                            <div>
+                                <img src="{{ $project->image }}" alt="{{ $project->title }}" class="aspect-square bg-cover">
+                            </div>
+                        </li>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="flex flex-col gap-12">
     <div class="container flex flex-col gap-12 items-center">
         <div class="pretitle">
             <p>Portfolio</p>
@@ -43,7 +91,7 @@
                                     </div>
                                     <ul class="flex flex-wrap gap-2">
                                         @foreach($project->tags as $tag)
-                                        <li class="mt-1 bg-gray-50 text-xxs w-fit rounded-full px-2 py-1 text-black">{{ $tag->name }}</li>
+                                        <li class="mt-1 bg-gray-50 text-xs w-fit rounded-full px-2 py-1 text-black">{{ $tag->name }}</li>
                                         @endforeach
                                     </ul>
                                 </div>
@@ -70,4 +118,4 @@
 
       observer.observe(portfolioSection);
     });
-  </script>
+  </script> -->

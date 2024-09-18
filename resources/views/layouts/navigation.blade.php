@@ -36,12 +36,12 @@
             </div>
             <ul class="w-full flex flex-col items-center gap-y-12">
                 <li class="relative text-xl" @click="mobileMenuOpen = false">
-                    <a href="#servicios">
+                    <a href="#experiencia">
                         {{ __('Experiencia') }}
                     </a>
                 </li>
                 <li class="relative text-xl" @click="mobileMenuOpen = false">
-                    <a href="#servicios">
+                    <a href="#educacion">
                         {{ __('Educación') }}
                     </a>
                     <!-- <ul
@@ -57,7 +57,7 @@
                     </ul> -->
                 </li>
                 <li class="relative text-xl" @click="mobileMenuOpen = false">
-                    <a href="#about">
+                    <a href="#habilidades">
                         {{ __('Skills') }}
                     </a>
                 </li><li class="relative text-xl" @click="mobileMenuOpen = false">
@@ -163,7 +163,7 @@
                     :class="{'w-full': open}"
                     class="cursor-pointer flex items-center px-navbar-item w-max"
                 > -->
-                <a href="#servicios" class="cursor-pointer flex items-center px-navbar-item w-max">
+                <a href="#experiencia" class="cursor-pointer flex items-center px-navbar-item w-max">
                 <i class="fi fi-sr-display-code pr-2"></i>
                 {{ __('Experiencia') }}
                 <!-- <svg
@@ -197,7 +197,7 @@
             </li>
             <!-- Educación -->
             <li class="relative">
-                <a href="#about"
+                <a href="#educacion"
                     class="cursor-pointer flex items-center px-navbar-item w-max"
                 >
                     <i class="fi fi-sr-diploma pr-2"></i>
@@ -206,7 +206,7 @@
             </li>
             <!-- Educación -->
             <li class="relative">
-                <a href="#about"
+                <a href="#habilidades"
                     class="cursor-pointer flex items-center px-navbar-item w-max"
                 >
                     <i class="fi fi-sr-settings-sliders pr-2"></i>
