@@ -7,11 +7,11 @@
             <div class="splide__track">
                 <ul class="splide__list">
                     @foreach($projects as $project)
-                    <li class="splide__slide flex flex-col-reverse justify-end md:flex-row gap-8">
-                        <div class="w-full md:w-1/2 flex justify-center items-start md:pr-4">
-                            <img src="{{ $project->image }}" alt="{{ $project->name }}" class="h-fit">
+                    <li class="splide__slide flex flex-col-reverse justify-end md:flex-row gap-8 h-[550px] md:h-full">
+                        <div class="w-full md:w-1/2 flex justify-center items-center md:pr-4">
+                            <img src="{{ $project->image }}" alt="{{ $project->name }}">
                         </div>
-                        <div class="flex flex-col gap-4 w-1/2">
+                        <div class="flex flex-col gap-4 w-full md:w-1/2">
                             <div class="flex justify-between">
                                 <h5>{{ $project->title }}</h5>
                             </div>

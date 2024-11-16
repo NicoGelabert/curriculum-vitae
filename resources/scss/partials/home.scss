@@ -32,10 +32,10 @@
     .indicator {
         left:0.125rem;
         transform: translateY(-50%);
-        transition: transform 0.3s ease; /* Agregar transición para el cambio de posición */
+        transition: transform 0.3s ease;
     }
     .dark .indicator {
-        transform: translateY(50%); /* Mover el indicador al lado derecho en el modo oscuro */
+        transform: translateY(50%);
     }
 }
 #experiences, #education, #skills-container, #portfolio{
@@ -47,20 +47,11 @@
     }
 }
 #experiences, #education, #portfolio{
-    .splide__arrow{
-        @apply md:left-[85%];
-        transform: translate(0);
-    }
-    .splide__arrow--next{
-        @apply top-2 md:top-[1em] ml-12;
-    }
-    .splide__arrow--prev{
-        @apply top-2 md:top-[1em] ml-60 md:ml-72 md:ml-0;
-    }
-    .splide__arrow--next, .splide__arrow--prev{
-        @apply hover:bg-primary_light dark:hover:bg-primary_dark;
-        svg{
-            @apply hover:fill-white dark:hover:fill-black;
+    @apply relative;
+    .splide__arrows{
+        @apply w-full md:w-32 flex justify-end gap-16 absolute top-2 right-4 md:right-40;
+        .splide__arrow{
+            @apply relative top-0 translate-y-0;
         }
     }
 }
