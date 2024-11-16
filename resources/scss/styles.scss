@@ -50,7 +50,7 @@ body{
         }
     }
     header{
-        @apply h-auto relative top-0 w-full block shadow-none bg-transparent text-black dark:text-white;
+        @apply h-auto fixed top-0 w-full block shadow-none bg-transparent text-black dark:text-white;
         transition: top 0.3s, background-color 0.3s ease;
         i {
             @apply leading-none text-lg;

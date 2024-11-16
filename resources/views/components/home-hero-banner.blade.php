@@ -1,4 +1,4 @@
-<div class="home-hero-banner" aria-label="Curriculum Vitae Nicolás Gelabert">
+<div class="home-hero-banner h-screen flex" aria-label="Curriculum Vitae Nicolás Gelabert">
     <div class="container flex h-auto pt-8">
         <div class="md:w-1/12 lg:w-2/12 h-auto hidden md:flex items-center justify-start">
             <div class="flex flex-col justify-between h-full max-h-60">
