@@ -13,7 +13,7 @@
                 <input id="nameInput" type="text" name="name" placeholder="{{ __('Su nombre') }}" required class="account w-full">
                 <input id="emailInput" type="email" name="email" placeholder="{{ __('Su correo electrónico') }}" required class="account w-full">
                 <input id="phoneInput" type="tel" name="phone" placeholder="{{ __('Su teléfono') }}" required class="account w-full" pattern="[0-9]{9}">
-                <select name="area" required id="areaInput">
+                <!-- <select name="area" required id="areaInput">
                     <option value="">{{ __('Zona del trabajo') }}</option>
                     <option value="Málaga">Málaga</option>
                     <option value="Torremolinos">Torremolinos</option>
@@ -23,7 +23,7 @@
                     <option value="Fuengirola">Fuengirola</option>
                     <option value="Calahonda">Calahonda</option>
                     <option value="Marbella">Marbella</option>
-                </select>
+                </select> -->
                 <textarea id="messageInput" name="message" placeholder="{{__('Deje un mensaje') }}" rows="4" required class="account w-full"></textarea>
                 <div class="g-recaptcha" data-sitekey="6LcjHtMpAAAAAII4PAM3Vh2hT-0RDntu6B-3a_pH"></div>
                 <x-button id="subscribeBtn" type="submit">{{__('Enviar')}}</x-button>

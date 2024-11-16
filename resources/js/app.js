@@ -269,6 +269,11 @@ var thumbnails = new Splide( '#thumbnail-carousel', {
   pagination  : false,
   arrows      : false,
   isNavigation: true,
+  breakpoints : {
+    480 : {
+      perPage : 6,
+    }
+  }
 });
 
 main.sync( thumbnails );

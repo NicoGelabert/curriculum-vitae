@@ -55,7 +55,7 @@
         @apply top-2 md:top-[1em] ml-12;
     }
     .splide__arrow--prev{
-        @apply top-2 md:top-[1em] ml-72 md:ml-0;
+        @apply top-2 md:top-[1em] ml-60 md:ml-72 md:ml-0;
     }
     .splide__arrow--next, .splide__arrow--prev{
         @apply hover:bg-primary_light dark:hover:bg-primary_dark;

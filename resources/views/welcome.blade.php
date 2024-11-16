@@ -10,7 +10,7 @@
 
     <x-educations :educations="$educations"/>
 
-    <hr class="opacity-0" id="habilidades"/>
+    <hr class="divider" id="habilidades"/>
 
     <x-skills :skills="$skills"/>
 
