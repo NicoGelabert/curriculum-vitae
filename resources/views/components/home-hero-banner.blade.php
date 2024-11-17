@@ -1,4 +1,4 @@
-<div class="home-hero-banner h-screen flex" aria-label="Curriculum Vitae Nicolás Gelabert">
+<div class="home-hero-banner mt-16 flex" aria-label="Curriculum Vitae Nicolás Gelabert">
     <div class="container flex h-auto pt-8">
         <div class="md:w-1/12 lg:w-2/12 h-auto hidden md:flex items-center justify-start">
             <div class="flex flex-col justify-between h-full max-h-60">
@@ -44,7 +44,8 @@
                                 <h1 class="animate-h1 text-4xl md:text-6xl leading-tight font-bold">{{ __($homeherobanner->headline) }}</h1>
                                 <p class="animate-p">{{ __($homeherobanner->description) }}</p>
                                 <div class="animate-button flex gap-4">
-                                    <x-button href="#portfolio"><p>{{ __('Ver Portfolio') }}</p></x-button>
+                                    <x-button href="https://demo.chimicreativo.es/" target="blank"><p>{{ __('Ver E-Commerce Demo') }}</p></x-button>
+                                    <x-button href="#portfolio" class="btn-secondary"><p>{{ __('Ver Portfolio') }}</p></x-button>
                                 </div>
                             </div>
                             <div class="w-full md:w-1/2 flex items-center">

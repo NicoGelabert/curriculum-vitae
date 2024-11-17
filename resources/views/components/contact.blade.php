@@ -1,8 +1,8 @@
 <div class="container mb-16 flex flex-col md:flex-row items-start gap-16" id="contact">
     <div class="w-full flex flex-col md:w-1/2 gap-8">
-        <h3 class="text-left">{{ __('Contacto')}}</h3>
+        <h3 class="text-left">{{ __('¡Conectemos!')}}</h3>
         <div class="flex flex-col justify-between items-start gap-8">
-            <p class="text-lg leading-8 text-gray-500">{{ __('Si tiene más consultas, no dude en ponerse en contacto.') }}</p>
+            <p class="text-lg leading-8 text-gray-500">{{ __('Si tiene alguna pregunta o deseas hablar sobre oportunidades de colaboración, no dudes en contactarme. Estoy disponible para nuevas propuestas y proyectos.') }}</p>
             <x-social-icons />
         </div>
     </div>
