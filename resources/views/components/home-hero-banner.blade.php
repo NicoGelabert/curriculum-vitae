@@ -1,6 +1,6 @@
-<div class="home-hero-banner mt-16 flex" aria-label="Curriculum Vitae Nicolás Gelabert">
-    <div class="container flex h-auto pt-8">
-        <div class="md:w-1/12 lg:w-2/12 h-auto hidden md:flex items-center justify-start">
+<div class="home-hero-banner mt-24 flex" aria-label="Curriculum Vitae Nicolás Gelabert">
+    <div class="container flex h-auto pt-8 md:pt-0">
+        <div class="md:w-1/12 h-auto hidden md:flex items-center justify-start">
             <div class="flex flex-col justify-between h-full max-h-60">
                 <ul class="flex flex-col gap-y-2">
                     @foreach (Config::get('languages') as $lang => $language)
@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-full md:w-10/12 lg:w-8/12 h-auto splide home-hero-banner-content">
+        <div class="w-full md:w-10/12 h-auto splide home-hero-banner-content">
             <div class="splide__track">
                 <ul class="splide__list">
                     @foreach($homeherobanners as $homeherobanner)
@@ -43,7 +43,7 @@
                                 </div>
                                 <h1 class="animate-h1 text-4xl md:text-6xl leading-tight font-bold">{{ __($homeherobanner->headline) }}</h1>
                                 <p class="animate-p">{{ __($homeherobanner->description) }}</p>
-                                <div class="animate-button flex gap-4">
+                                <div class="animate-button flex md:flex-col lg:flex-row gap-4">
                                     <x-button href="https://demo.chimicreativo.es/" target="blank"><p>{{ __('Ver E-Commerce Demo') }}</p></x-button>
                                     <x-button href="#portfolio" class="btn-secondary"><p>{{ __('Ver Portfolio') }}</p></x-button>
                                 </div>
@@ -57,7 +57,7 @@
                 </ul>
             </div>
         </div>
-        <div class="md:w-1/12 lg:w-2/12 h-auto hidden md:flex items-center justify-end">
+        <div class="md:w-1/12 h-auto hidden md:flex items-center justify-end">
             <div class="flex flex-col justify-between h-full max-h-60 social-icons">
                 <a href="https://wa.me/34623037048" class="h-6 w-6 aspect-square rounded-md p-2" target="_blank">
                     <i class="flex text-base leading-none fi fi-brands-whatsapp"></i>

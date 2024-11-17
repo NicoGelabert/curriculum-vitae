@@ -131,7 +131,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
   var homeHeroBanner = new Splide('.home-hero-banner-content', {
       type        : 'fade',
       rewind      : true,
-      pagination  : true,
+      pagination  : false,
       isNavigation: false,
       arrows      : false,
       focus       : 'center',
@@ -208,20 +208,21 @@ document.addEventListener( 'DOMContentLoaded', function () {
 // Education
 var education = new Splide( '#education', {
   perPage     : 1,
-  height      : '20rem',
-  direction   : 'ttb',
-  arrows      : true,
-  pagination  : false,
-  wheel       : true,
-  breakpoints : {
-    480 : {
-      height      : '30rem',
-      perPage     : 1,
-      direction   : 'ltr',
-      wheel       : false,
+    height      : '20rem',
+    direction   : 'ttb',
+    arrows      : true,
+    pagination  : false,
+    wheel       : true,
+    gap         : '10rem',
+    breakpoints : {
+      480 : {
+        height      : '40rem',
+        perPage     : 1,
+        direction   : 'ltr',
+        wheel       : false,
+      }
     }
-  }
-});
+  });
 var bar_ed = education.root.querySelector( '.my-slider-progress-bar' );
 education.on( 'mounted move', function () {
   var end  = education.Components.Controller.getEnd() + 1;

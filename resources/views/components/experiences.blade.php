@@ -5,7 +5,7 @@
     <div class="splide__track md:mr-24">
         <ul class="splide__list">
             @foreach ($experiences as $experience)
-            <li class="splide__slide flex flex-col gap-4">
+            <li class="splide__slide flex flex-col gap-4 mb-20">
                 <div class="flex flex-col-reverse md:flex-row-reverse gap-8 justify-between md:justify-end items-start">
                     <div class="flex flex-col gap-4">
                         <p class="text-primary_light dark:text-primary_dark">{{ __($experience -> timelapse) }}</p>
@@ -13,7 +13,7 @@
                         <div class="flex gap-4 items-center">
                             <p class="text-gray_dark">{{ $experience -> company }}</p>
                             @if ( $experience -> site )
-                            <a href="{{ $experience -> site }}">
+                            <a href="{{ $experience -> site }}" target="_blank">
                                 <x-new-window-icon />
                             </a>
                             @endif

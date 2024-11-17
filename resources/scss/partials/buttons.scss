@@ -5,7 +5,14 @@
     @apply font-sans w-fit relative px-4 py-2 text-xxs md:text-sm rounded-full bg-primary_light text-white hover:bg-black hover:text-white dark:bg-primary_dark dark:text-black dark:hover:bg-black dark:hover:text-white transition-all;
 }
 .btn-secondary{
-    @apply font-sans w-fit relative px-4 py-2 text-xxs md:text-sm rounded-full bg-transparent text-white hover:bg-black hover:text-white hover:border-primary_light transition-all;
+    @apply font-sans
+    w-fit
+    relative
+    px-4 py-2
+    text-xxs lg:text-sm
+    text-black dark:text-white hover:text-primary_light dark:hover:text-primary_dark
+    bg-transparent
+    transition-all;
     i{
         @apply absolute right-0 top-1/2 text-transparent;
         transform: translateY(-45%);

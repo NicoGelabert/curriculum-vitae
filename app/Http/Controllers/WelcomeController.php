@@ -18,8 +18,8 @@ class WelcomeController extends Controller
     public function index()
     {
         $homeherobanners = HomeHeroBanner::all();
-        $experiences = Experience::all();
-        $educations = Education::all();
+        $experiences = Experience::orderBy('id', 'desc')->get();
+        $educations = Education::orderBy('id', 'desc')->get();
         $skills = Skill::all();
         $features = Feature::all();
         $services = Service::all();
