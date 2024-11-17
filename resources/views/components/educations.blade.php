@@ -13,7 +13,7 @@
                         <div class="flex gap-4 items-center">
                             <p class="text-gray_dark">{{ $education -> school }}</p>
                             @if ( $education -> site )
-                            <a href="{{ $education -> site }}">
+                            <a href="{{ $education -> site }}" target="_blank">
                                 <x-new-window-icon />
                             </a>
                             @endif
