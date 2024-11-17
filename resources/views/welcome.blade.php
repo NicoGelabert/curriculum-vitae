@@ -10,7 +10,7 @@
 
     <x-educations :educations="$educations"/>
 
-    <hr id="habilidades"/>
+    <hr id="habilidades" class="mt-16 md:mt-0"/>
 
     <x-skills :skills="$skills"/>
 
@@ -20,7 +20,7 @@
 
     <!-- <x-coverage/> -->
     
-    <hr class="mt-8 mb-16 opacity-0" id="portfolio"/>
+    <hr class="md:mb-16 opacity-0" id="portfolio"/>
     
     <x-portfolio :projects="$projects" />
     
