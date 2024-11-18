@@ -13,19 +13,8 @@
                 <input id="nameInput" type="text" name="name" placeholder="{{ __('Su nombre') }}" required class="account w-full">
                 <input id="emailInput" type="email" name="email" placeholder="{{ __('Su correo electrónico') }}" required class="account w-full">
                 <input id="phoneInput" type="tel" name="phone" placeholder="{{ __('Su teléfono') }}" required class="account w-full" pattern="[0-9]{9}">
-                <!-- <select name="area" required id="areaInput">
-                    <option value="">{{ __('Zona del trabajo') }}</option>
-                    <option value="Málaga">Málaga</option>
-                    <option value="Torremolinos">Torremolinos</option>
-                    <option value="Benalmádena">Benalmádena</option>
-                    <option value="Los Boliches">Los Boliches</option>
-                    <option value="Mijas">Mijas</option>
-                    <option value="Fuengirola">Fuengirola</option>
-                    <option value="Calahonda">Calahonda</option>
-                    <option value="Marbella">Marbella</option>
-                </select> -->
                 <textarea id="messageInput" name="message" placeholder="{{__('Deje un mensaje') }}" rows="4" required class="account w-full"></textarea>
-                <div class="g-recaptcha" data-sitekey="6LcjHtMpAAAAAII4PAM3Vh2hT-0RDntu6B-3a_pH"></div>
+                <div class="g-recaptcha" data-sitekey="6LffaoIqAAAAAOWaZWImVzYRgl2EaS0V28C1F8HY"></div>
                 <x-button id="subscribeBtn" type="submit">{{__('Enviar')}}</x-button>
             </div>
         </form>
@@ -51,7 +40,6 @@
             const name = document.getElementById('nameInput').value;
             const email = document.getElementById('emailInput').value;
             const phone = document.getElementById('phoneInput').value;
-            const area = document.getElementById('areaInput').value;
             const message = document.getElementById('messageInput').value;
             try {
                 const response = await fetch('{{ route("contact.store") }}', {
@@ -60,7 +48,7 @@
                         'Content-Type': 'application/json',
                         'X-CSRF-TOKEN': '{{ csrf_token() }}'
                     },
-                    body: JSON.stringify({ name, email, phone, area, message })
+                    body: JSON.stringify({ name, email, phone, message })
                 });
 
                 const data = await response.json();
