@@ -10,7 +10,7 @@
 
     <x-educations :educations="$educations"/>
 
-    <hr id="habilidades" class="mt-16 md:mt-0"/>
+    <hr id="habilidades" class="mt-16 md:mt-0 opacity-0"/>
 
     <x-skills :skills="$skills"/>
 
