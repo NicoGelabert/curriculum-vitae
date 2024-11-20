@@ -5,7 +5,7 @@
     <div class="splide__track md:mr-24">
         <ul class="splide__list">
             @foreach ($educations as $education)
-            <li class="splide__slide flex flex-col gap-4 mb-20">
+            <li class="splide__slide flex flex-col gap-4">
                 <div class="flex flex-col-reverse md:flex-row-reverse gap-8 justify-between md:justify-end items-start">
                     <div class="flex flex-col gap-4">
                         <p class="text-primary_light dark:text-primary_dark">{{ $education -> timelapse }}</p>

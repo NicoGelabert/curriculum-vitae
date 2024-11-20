@@ -188,8 +188,14 @@ document.addEventListener( 'DOMContentLoaded', function () {
     wheel       : true,
     gap         : '10rem',
     breakpoints : {
+      979 : {
+        height      : '25rem',
+        perPage     : 1,
+        direction   : 'ltr',
+        wheel       : false,
+      },
       480 : {
-        height      : '40rem',
+        height      : 'auto',
         perPage     : 1,
         direction   : 'ltr',
         wheel       : false,
@@ -215,8 +221,14 @@ var education = new Splide( '#education', {
     wheel       : true,
     gap         : '10rem',
     breakpoints : {
-      480 : {
+      979 : {
         height      : '40rem',
+        perPage     : 1,
+        direction   : 'ltr',
+        wheel       : false,
+      },
+      480 : {
+        height      : 'auto',
         perPage     : 1,
         direction   : 'ltr',
         wheel       : false,
