@@ -16,11 +16,9 @@
 
     <!-- <x-benefits /> -->
     
-    <!-- <x-features :features="$features"/> -->
+    <x-features :features="$features"/>
 
     <!-- <x-coverage/> -->
-    
-    <hr class="md:mb-16 opacity-0" id="portfolio"/>
     
     <x-portfolio :projects="$projects" />
     

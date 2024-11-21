@@ -67,3 +67,27 @@
         }
     }
 }
+
+//Download CV button
+
+.btns-port-web .text-rotate svg {
+    animation: circular-text-rotate 5s linear paused infinite;
+    font-weight:bold;
+    letter-spacing: 0.24rem;
+    overflow: visible;
+    width: 100px;
+}
+.btns-port-web .text-rotate svg:hover {
+    animation-play-state: running;
+}
+.btns-port-web .text-rotate path {
+    fill: none;
+}
+.btns-port-web .text-rotate text {
+    @apply fill-black dark:fill-white;
+}
+@keyframes circular-text-rotate {
+    to {
+    transform: rotate(1turn);
+    }
+}

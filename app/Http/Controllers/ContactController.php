@@ -23,7 +23,6 @@ class ContactController extends Controller
             'name' => 'required|string',
             'email' => 'required|email',
             'phone' => 'required|numeric',
-            'area' => 'required|string',
             'message' => 'required|string',
         ]);
 
@@ -31,7 +30,6 @@ class ContactController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
-            'area' => $request->area,
             'message' => $request->message,
         ]);
 
