@@ -14,7 +14,7 @@
                 <input id="emailInput" type="email" name="email" placeholder="{{ __('Su correo electrónico') }}" required class="account w-full">
                 <input id="phoneInput" type="tel" name="phone" placeholder="{{ __('Su teléfono') }}" required class="account w-full" pattern="[0-9]{9}">
                 <textarea id="messageInput" name="message" placeholder="{{__('Deje un mensaje') }}" rows="4" required class="account w-full"></textarea>
-                <!-- <div class="g-recaptcha" data-sitekey="6Lcvb4IqAAAAABl4-7hmAxdmfCQ0tfeEMWuRKT09"></div> -->
+                <div class="g-recaptcha" data-sitekey="6Lcvb4IqAAAAABl4-7hmAxdmfCQ0tfeEMWuRKT09"></div>
                 <x-button id="subscribeBtn" type="submit">{{__('Enviar')}}</x-button>
             </div>
         </form>
