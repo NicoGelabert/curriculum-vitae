@@ -20,7 +20,7 @@
         </form>
         <div id="successMessage" class="mx-auto" style="display: none;">
             <H4 class="text-center">{{ __('Mensaje Enviado!') }}</H4>
-            <img src="{{ asset('storage/img/mensaje-enviado.gif')}}" alt="Mensaje enviado">
+            <img src="{{ asset('storage/images/common/mensaje-enviado.gif')}}" alt="Mensaje enviado">
         </div>
         <div id="errorMessage" class="mx-auto" style="display: none;">
         {{ __('El envío falló. Vuelva a intentar, por favor.') }}
