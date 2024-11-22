@@ -71,14 +71,15 @@
 //Download CV button
 
 .btns-port-web .text-rotate svg {
-    animation: circular-text-rotate 5s linear paused infinite;
+    animation: circular-text-rotate 10s linear paused infinite;
+    animation-play-state: running;
     font-weight:bold;
-    letter-spacing: 0.24rem;
+    letter-spacing: 0.2rem;
     overflow: visible;
     width: 100px;
 }
 .btns-port-web .text-rotate svg:hover {
-    animation-play-state: running;
+    animation-play-state:paused;
 }
 .btns-port-web .text-rotate path {
     fill: none;

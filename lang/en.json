@@ -4,6 +4,7 @@
     "Ver Portfolio" : "View Portfolio",
     "Ver E-Commerce Demo" : "View E-Commerce Demo",
 
+    "Descargar Curriculum Vitae" : "Download Curriculum Vitae",
 
     "Contacto" : "Contact",
 
@@ -16,6 +17,8 @@
     "Su teléfono" : "Your phone",
     "Deje un mensaje" : "Leave a message",
     "Enviar" : "Send",
+    "¡Mensaje Enviado!" : "Message sent!",
+    "El envío falló. Vuelva a intentar, por favor." : "Submission failed. Please try again.",
 
 
     "Experiencia" : "Experience",

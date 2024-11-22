@@ -33,7 +33,7 @@ body{
         @apply hover:text-primary_light dark:hover:text-primary_dark;
     }
     .logo{
-        @apply h-auto max-w-12 transition-all fill-black dark:fill-white;
+        @apply h-auto max-w-12 transition-all;
         a{
             @apply hover:bg-transparent dark:hover:bg-transparent hover:text-white;
         }
