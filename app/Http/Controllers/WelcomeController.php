@@ -30,6 +30,17 @@ class WelcomeController extends Controller
             ];
         })->values();
         $educations = Education::orderBy('id', 'desc')->get();
+        $educationsJson = $educations->map(function ($education) {
+            return [
+                'title' => $education->title,
+                'description' => $education->description,
+                'site' => $education->site,
+                'timelapse' => $education->timelapse,
+                'image' => $education->image,
+                'school' => $education->school,
+                'certificate' => $education->certificate,
+            ];
+        })->values();
         $skills = Skill::all();
         $features = Feature::all();
         $services = Service::all();
@@ -41,6 +52,7 @@ class WelcomeController extends Controller
             'experiences',
             'experiencesJson',
             'educations',
+            'educationsJson',
             'skills',
             'features',
             'services',

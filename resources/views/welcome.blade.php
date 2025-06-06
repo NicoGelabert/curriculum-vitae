@@ -8,7 +8,7 @@
     
     <hr class="divider" id="educacion"/>
 
-    <!-- <x-educations :educations="$educations"/> -->
+    <x-educations :educations="$educations" :educationsJson="$educationsJson"/>
 
     <hr id="habilidades" class="mt-16 md:mt-0 opacity-0"/>
 

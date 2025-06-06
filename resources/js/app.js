@@ -179,7 +179,8 @@ document.addEventListener( 'DOMContentLoaded', function () {
 // Fin Home Hero Banner
 
 // Experience
-  var experiences = new Splide( '#experiencesSlider', {
+  document.querySelectorAll('.modalSlider').forEach((el) => {
+  let slider = new Splide(el, {
     perPage     : 3,
     perMove     : 1,
     arrows      : true,
@@ -187,27 +188,29 @@ document.addEventListener( 'DOMContentLoaded', function () {
     wheel       : false,
     gap         : '3rem',
     breakpoints : {
-    //   979 : {
-    //     height      : '25rem',
-    //     perPage     : 1,
-    //     direction   : 'ltr',
-    //     wheel       : false,
-    //   },
-      480 : {
-        direction   : 'ttb',
-        gap         : '1.5rem',
-        height      : '500px',
-        perPage     : 2,
-      }
+      480: {
+        direction: 'ttb',
+        gap      : '1.5rem',
+        height   : '500px',
+        perPage  : 2,
+      },
     }
   });
-  var bar_ex = experiences.root.querySelector( '.my-slider-progress-bar' );
-  experiences.on( 'mounted move', function () {
-    var end  = experiences.Components.Controller.getEnd() + 1;
-    var rate = Math.min( ( experiences.index + 1 ) / end, 1 );
-    bar_ex.style.width = String( 100 * rate ) + '%';
-  } );
-  experiences.mount();
+
+  // Buscamos la barra de progreso DENTRO de este slider
+  let progressBar = el.querySelector('.my-slider-progress-bar');
+
+  slider.on('mounted move', function () {
+    let end = slider.Components.Controller.getEnd() + 1;
+    let rate = Math.min((slider.index + 1) / end, 1);
+    if (progressBar) {
+      progressBar.style.width = String(100 * rate) + '%';
+    }
+  });
+
+  slider.mount();
+});
+
 // Experience
 
 // Education

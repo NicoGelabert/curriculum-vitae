@@ -9,14 +9,16 @@ use Illuminate\View\Component;
 class Educations extends Component
 {
     public $educations;
+    public $educationsJson;
     /**
      * Create a new component instance.
      * @param  mixed  $educations
      * @return void
      */
-    public function __construct($educations)
+    public function __construct($educations, $educationsJson)
     {
         $this->educations = $educations;
+        $this->educationsJson = $educationsJson;
     }
 
     /**

@@ -2228,12 +2228,12 @@
     "src": "node_modules/flag-icon-css/flags/4x3/zw.svg"
   },
   "resources/css/app.css": {
-    "file": "assets/app-8489b130.css",
+    "file": "assets/app-a68cfce3.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
   "resources/js/app.js": {
-    "file": "assets/app-1176743d.js",
+    "file": "assets/app-08eb7969.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
