@@ -2,25 +2,25 @@
 
     <x-home-hero-banner :homeherobanners="$homeherobanners" />
 
-    <hr class="divider" id="experiencia"/>
+    <hr class="my-8 border-t-0" id="experiencia"/>
     
-    <x-experiences :experiences="$experiences"/>
+    <x-experiences :experiences="$experiences" :experiencesJson="$experiencesJson"/>
     
     <hr class="divider" id="educacion"/>
 
-    <x-educations :educations="$educations"/>
+    <!-- <x-educations :educations="$educations"/> -->
 
     <hr id="habilidades" class="mt-16 md:mt-0 opacity-0"/>
 
-    <x-skills :skills="$skills"/>
+    <!-- <x-skills :skills="$skills"/> -->
 
     <!-- <x-benefits /> -->
     
-    <x-features :features="$features"/>
+    <!-- <x-features :features="$features"/> -->
 
     <!-- <x-coverage/> -->
     
-    <x-portfolio :projects="$projects" />
+    <!-- <x-portfolio :projects="$projects" /> -->
     
     <!-- <x-clients :clients="$clients" /> -->
     
@@ -30,7 +30,7 @@
     
     <hr class="mt-8 mb-16 opacity-0" id="contact"/>
 
-    <x-contact />
+    <!-- <x-contact /> -->
 
     <hr class="divider"/>
     

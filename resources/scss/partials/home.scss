@@ -49,9 +49,15 @@
 #experiences, #education, #portfolio{
     @apply relative;
     .splide__arrows{
-        @apply w-full md:w-32 flex justify-end gap-16 absolute top-2 right-4 md:right-40;
+        @apply w-auto md:w-28 flex justify-end gap-4;
         .splide__arrow{
-            @apply relative top-0 translate-y-0;
+            @apply relative top-0 translate-y-0 translate-x-0 left-0;
+        }
+        .splide__arrow--prev{
+            @apply left-0;
+        }
+        .splide__arrow--next{
+            @apply right-0;
         }
     }
 }

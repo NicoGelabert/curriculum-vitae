@@ -19,6 +19,16 @@ class WelcomeController extends Controller
     {
         $homeherobanners = HomeHeroBanner::all();
         $experiences = Experience::orderBy('id', 'desc')->get();
+        $experiencesJson = $experiences->map(function ($experience) {
+            return [
+                'title' => $experience->title,
+                'description' => $experience->description,
+                'site' => $experience->site,
+                'timelapse' => $experience->timelapse,
+                'image' => $experience->image,
+                'company' => $experience->company,
+            ];
+        })->values();
         $educations = Education::orderBy('id', 'desc')->get();
         $skills = Skill::all();
         $features = Feature::all();
@@ -29,6 +39,7 @@ class WelcomeController extends Controller
         return view('welcome', compact(
             'homeherobanners',
             'experiences',
+            'experiencesJson',
             'educations',
             'skills',
             'features',

@@ -131,7 +131,8 @@
         </main>
         
         @include('layouts.footer')
-        
+        </div>
+
     </div>
     </body>
 </html>
@@ -155,4 +156,5 @@
             }
         });
     });
+
 </script>
