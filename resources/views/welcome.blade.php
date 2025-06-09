@@ -12,7 +12,7 @@
 
     <hr id="habilidades" class="mt-16 md:mt-0 opacity-0"/>
 
-    <!-- <x-skills :skills="$skills"/> -->
+    <x-skills :skills="$skills"/>
 
     <!-- <x-benefits /> -->
     
@@ -20,7 +20,7 @@
 
     <!-- <x-coverage/> -->
     
-    <!-- <x-portfolio :projects="$projects" /> -->
+    <x-portfolio :projects="$projects" />
     
     <!-- <x-clients :clients="$clients" /> -->
     
@@ -30,7 +30,7 @@
     
     <hr class="mt-8 mb-16 opacity-0" id="contact"/>
 
-    <!-- <x-contact /> -->
+    <x-contact />
 
     <hr class="divider"/>
     

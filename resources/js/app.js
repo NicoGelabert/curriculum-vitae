@@ -178,7 +178,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
   }
 // Fin Home Hero Banner
 
-// Experience
+// Experience and Education
   document.querySelectorAll('.modalSlider').forEach((el) => {
   let slider = new Splide(el, {
     perPage     : 3,
@@ -211,117 +211,82 @@ document.addEventListener( 'DOMContentLoaded', function () {
   slider.mount();
 });
 
-// Experience
-
-// Education
-// var education = new Splide( '#education', {
-//   perPage     : 1,
-//     height      : '20rem',
-//     direction   : 'ttb',
-//     arrows      : true,
-//     pagination  : false,
-//     wheel       : true,
-//     gap         : '10rem',
-//     breakpoints : {
-//       979 : {
-//         height      : '40rem',
-//         perPage     : 1,
-//         direction   : 'ltr',
-//         wheel       : false,
-//       },
-//       480 : {
-//         height      : 'auto',
-//         perPage     : 1,
-//         direction   : 'ltr',
-//         wheel       : false,
-//       }
-//     }
-//   });
-// var bar_ed = education.root.querySelector( '.my-slider-progress-bar' );
-// education.on( 'mounted move', function () {
-//   var end  = education.Components.Controller.getEnd() + 1;
-//   var rate = Math.min( ( education.index + 1 ) / end, 1 );
-//   bar_ed.style.width = String( 100 * rate ) + '%';
-// } );
-// education.mount();
-// Education
-
 // Skills
-// var skills = new Splide('#skills', {
-//   type        : 'loop',
-//   perPage     : 6,
-//   drag        : 'free',
-//   pagination  : false,
-//   arrows      : false,
-//   width       : '95%',
-//   focus       : 'center',
-//   autoScroll  : {
-//     speed: 1,
-//   },
-//   breakpoints : {
-//     480 : {
-//       perPage : 3,
-//     }
-//   }
-// });
+var skills = new Splide('#skills', {
+  type        : 'loop',
+  perPage     : 6,
+  drag        : 'free',
+  pagination  : false,
+  arrows      : false,
+  width       : '95%',
+  focus       : 'center',
+  autoScroll  : {
+    speed: 1,
+  },
+  breakpoints : {
+    480 : {
+      perPage : 3,
+    }
+  }
+});
 
-// skills.mount( { AutoScroll } );
+skills.mount( { AutoScroll } );
 //Skills
 
 // Portfolio
-// var main = new Splide( '#main-carousel', {
-//   type      : 'fade',
-//   rewind    : true,
-//   pagination: true,
-//   arrows    : true,
-// });
+var main = new Splide( '#main-carousel', {
+  type      : 'fade',
+  rewind    : true,
+  pagination: true,
+  arrows    : true,
+});
 
-// var thumbnails = new Splide( '#thumbnail-carousel', {
-//   type        : 'loop',
-//   perPage     : 3,
-//   gap         : 10,
-//   rewind      : true,
-//   pagination  : false,
-//   arrows      : false,
-//   isNavigation: true,
-//   breakpoints : {
-//     480 : {
-//       perPage : 6,
-//     }
-//   }
-// });
+var thumbnails = new Splide( '#thumbnail-carousel', {
+  type        : 'loop',
+  perPage     : 3,
+  gap         : 10,
+  rewind      : true,
+  pagination  : false,
+  arrows      : false,
+  isNavigation: true,
+  breakpoints : {
+    480 : {
+      perPage : 6,
+    }
+  }
+});
 
-// main.sync( thumbnails );
-// main.mount();
-// thumbnails.mount();
+main.sync( thumbnails );
+main.mount();
+thumbnails.mount();
 
-// thumbnails.on('mounted', function(){
-//   limitPaginationDots(thumbnails);
-// })
+thumbnails.on('mounted', function(){
+  limitPaginationDots(thumbnails);
+})
 
-// function limitPaginationDots(thumbnails) {
-//   const maxDots = 5;
-//   const pagination = thumbnails.Components.Pagination;
-//   const dots = pagination.data.list.childNodes;
+function limitPaginationDots(thumbnails) {
+  const maxDots = 5;
+  const pagination = thumbnails.Components.Pagination;
+  const dots = pagination.data.list.childNodes;
 
-//   if (dots.length > maxDots) {
-//     const step = Math.ceil(dots.length / maxDots);
-//     const newDots = [];
+  if (dots.length > maxDots) {
+    const step = Math.ceil(dots.length / maxDots);
+    const newDots = [];
 
-//     for (let i = 0; i < maxDots; i++) {
-//       const dotIndex = i * step;
-//       newDots.push(dots[dotIndex]);
-//     }
+    for (let i = 0; i < maxDots; i++) {
+      const dotIndex = i * step;
+      newDots.push(dots[dotIndex]);
+    }
 
-//     // Clear existing dots
-//     pagination.data.list.innerHTML = '';
+    // Clear existing dots
+    pagination.data.list.innerHTML = '';
 
-//     // Append limited dots
-//     newDots.forEach(dot => {
-//       pagination.data.list.appendChild(dot);
-//     });
-//   }
-// }
+    // Append limited dots
+    newDots.forEach(dot => {
+      pagination.data.list.appendChild(dot);
+    });
+  }
+}
 // Fin Portfolio
 
 });

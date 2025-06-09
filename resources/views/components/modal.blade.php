@@ -95,17 +95,18 @@
             </div>
         </div>
     </div>
-    <div x-show="isOpen" @click.away="isOpen = false" class="fixed inset-0 flex justify-center bg-black bg-opacity-75 dark:bg-opacity-85 z-50 overflow-auto">
+    <div x-show="isOpen" @click.away="isOpen = false" class="fixed inset-0 flex justify-center bg-white dark:bg-black bg-opacity-85 dark:bg-opacity-85 z-50 overflow-auto">
         <div class="mx-8 mt-8 mb-24 overflow-auto lg:my-auto lg:flex lg:flex-row lg:gap-8 w-full h-auto lg:max-w-screen-xl">
-            <div class="text-white lg:w-1/2 flex flex-col gap-4">
+            <div class="lg:w-1/2 flex flex-col gap-4">
                 <div class="flex flex-col gap-2">
+                    <p class="text-primary_light dark:text-primary_dark text-xs" x-text="currentItem.timelapse"></p>
                     <h3 x-text="currentItem.title"></h3>
                     <div class="flex gap-4 items-center">
                         <template x-if="currentItem.site">
                             <a class="flex gap-4 items-center" :href="currentItem.site" target="_blank">
                                 <img :src="currentItem.image" alt="" class="max-w-[40px] w-auto rounded-full object-contain align-top">
-                                <p class="text-gray_dark dark:text-gray_light/60" x-show="currentItem.company" x-text="currentItem.company"></p>
-                                <p class="text-gray_dark dark:text-gray_light/60" x-show="currentItem.school" x-text="currentItem.school"></p>
+                                <p class="dark:text-gray_light/60" x-show="currentItem.company" x-text="currentItem.company"></p>
+                                <p class="dark:text-gray_light/60" x-show="currentItem.school" x-text="currentItem.school"></p>
                                 <x-new-window-icon class="h-4 w-auto"/>
                             </a>
                         </template>
@@ -113,8 +114,8 @@
                         <template x-if="!currentItem.site">
                             <div class="flex gap-4 items-center">
                                 <img :src="currentItem.image" alt="" class="max-w-[40px] w-auto rounded-full object-contain align-top">
-                                <p class="text-gray_dark dark:text-gray_light/60" x-show="currentItem.company" x-text="currentItem.company"></p>
-                                <p class="text-gray_dark dark:text-gray_light/60" x-show="currentItem.school" x-text="currentItem.school"></p>
+                                <p class="dark:text-gray_light/60" x-show="currentItem.company" x-text="currentItem.company"></p>
+                                <p class="dark:text-gray_light/60" x-show="currentItem.school" x-text="currentItem.school"></p>
                             </div>
                         </template>
     
