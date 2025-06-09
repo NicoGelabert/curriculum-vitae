@@ -45,7 +45,7 @@
                                 <p class="animate-p">{{ __($homeherobanner->description) }}</p>
                                 <div class="animate-button flex md:flex-col lg:flex-row gap-4">
                                     <x-button href="https://demo.chimicreativo.es/" target="blank"><p>{{ __('Ver E-Commerce Demo') }}</p></x-button>
-                                    <x-button href="#portfolio" class="btn-secondary"><p>{{ __('Ver Portfolio') }}</p></x-button>
+                                    <x-button href="#works" class="btn-secondary"><p>{{ __('Ver Portfolio') }}</p></x-button>
                                 </div>
                             </div>
                             <div class="w-full md:w-1/2 flex items-center">

@@ -61,7 +61,7 @@
                         {{ __('Skills') }}
                     </a>
                 </li><li class="relative text-xl" @click="mobileMenuOpen = false">
-                    <a href="#portfolio">
+                    <a href="#works">
                         {{ __('Portfolio') }}
                     </a>
                 </li>
@@ -215,7 +215,7 @@
             </li>
             <!-- Educación -->
             <li class="relative">
-                <a href="#portfolio"
+                <a href="#works"
                     class="cursor-pointer flex items-center px-navbar-item w-max"
                 >
                     <i class="fi fi-sr-customize-computer pr-2"></i>

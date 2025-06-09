@@ -24,7 +24,7 @@
                 </a>
             </div>
             <div>
-                <a href="#portfolio">
+                <a href="#works">
                     <h6>{{ __('Portfolio') }}</h6>
                 </a>
             </div>
