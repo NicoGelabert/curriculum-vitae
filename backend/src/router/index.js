@@ -11,6 +11,8 @@ import Skills from "../views/Skills/Skills.vue";
 import Categories from "../views/Categories/Categories.vue";
 import Products from "../views/Products/Products.vue";
 import ProductView from "../views/Products/ProductView.vue";
+import Educations from "../views/Educations/Educations.vue";
+import EducationView from "../views/Educations/EducationView.vue";
 import Alergens from "../views/Alergens/Alergens.vue";
 import Services from "../views/Services/Services.vue";
 import Projects from "../views/Projects/Projects.vue";
@@ -77,6 +79,24 @@ const routes = [
         path: 'products/:id',
         name: 'app.products.edit',
         component: ProductView,
+        props: {
+          id: (value) => /^\d+$/.test(value)
+        }
+      },      
+      {
+        path: 'educations',
+        name: 'app.educations',
+        component: Educations
+      },
+      {
+        path: 'educations/create',
+        name: 'app.educations.create',
+        component: EducationView
+      },
+      {
+        path: 'educations/:id',
+        name: 'app.educations.edit',
+        component: EducationView,
         props: {
           id: (value) => /^\d+$/.test(value)
         }

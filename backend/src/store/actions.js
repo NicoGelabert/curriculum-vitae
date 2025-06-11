@@ -842,3 +842,88 @@ export function updateClient({commit}, client) {
 export function deleteClient({commit}, client) {
   return axiosClient.delete(`/clients/${client.id}`)
 }
+
+// EDUCATION
+export function getEducations({commit, state}, {url = null, search = '', per_page, sort_field, sort_direction} = {}) {
+  commit('setEducations', [true])
+  url = url || '/educations'
+  const params = {
+    per_page: state.educations.limit,
+  }
+  return axiosClient.get(url, {
+    params: {
+      ...params,
+      search, per_page, sort_field, sort_direction
+    }
+  })
+    .then((response) => {
+      commit('setEducations', [false, response.data])
+    })
+    .catch(() => {
+      commit('setEducations', [false])
+    })
+}
+
+export function getEducation({commit}, id) {
+  return axiosClient.get(`/educations/${id}`)
+}
+
+export function createEducation({ commit }, education) {
+  const form = new FormData();
+
+  form.append('title', education.title);
+  form.append('timelapse', education.timelapse || '');
+  form.append('school', education.school || '');
+  form.append('site', education.site || '');
+  form.append('description', education.description || '');
+  form.append('certificate', education.certificate || '');
+  form.append('skills', education.skills || '');
+
+  // Agregar imágenes al FormData
+  if (education.images && education.images.length) {
+    education.images.forEach((im) => {
+      form.append(`images[]`, im);
+    });
+  }
+
+  return axiosClient.post('/educations', form);
+}
+
+
+export function updateEducation({commit}, education) {
+  const id = education.id
+  if (education.images && education.images.length) {
+    const form = new FormData();
+    form.append('id', education.id);
+    form.append('title', education.title);
+    form.append('school', education.school || '');
+    form.append('site', education.site || '');
+    form.append('description', education.description || '');
+    form.append('certificate', education.certificate || '');
+    form.append('skills', education.skills || '');
+    
+    // Agregar imágenes al FormData
+    if (education.images && education.images.length) {
+      education.images.forEach((im) => {
+        form.append(`images[]`, im);
+      });
+    }
+    // Agregar imágenes eliminadas al FormData
+    if (education.deleted_images && education.deleted_images.length) {
+      education.deleted_images.forEach((id) => form.append('deleted_images[]', id));
+    }
+    // Agregar posiciones de imágenes al FormData
+    for (let id in education.image_positions) {
+      form.append(`image_positions[${id}]`, education.image_positions[id]);
+    }
+    form.append('_method', 'PUT');
+    education = form;
+  } else {
+    education._method = 'PUT'
+  }
+  return axiosClient.post(`/educations/${id}`, education)
+}
+
+export function deleteEducation({commit}, id) {
+  return axiosClient.delete(`/educations/${id}`)
+}

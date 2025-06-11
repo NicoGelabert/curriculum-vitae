@@ -289,6 +289,16 @@ function limitPaginationDots(thumbnails) {
 }
 // Fin Portfolio
 
+//EducationInner
+// var educationModalImages = new Splide('#educationModalImages', {
+//   type        : 'slide',
+//   perPage     : 1,
+//   pagination  : true,
+//   arrows      : false,
+//   focus       : 'center',
+// });
+
+// educationModalImages.mount();
 });
 
 

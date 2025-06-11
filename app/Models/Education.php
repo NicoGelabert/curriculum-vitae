@@ -12,7 +12,7 @@ class Education extends Model
     use HasFactory;
     use HasSlug;
 
-    protected $fillable = ['image', 'timelapse', 'title', 'school', 'site','description', 'certificate', 'skills', 'created_at', 'updated_at'];
+    protected $fillable = ['timelapse', 'title', 'school', 'site','description', 'certificate', 'skills', 'created_at', 'updated_at'];
 
     public function getSlugOptions() : SlugOptions
     {
@@ -20,8 +20,20 @@ class Education extends Model
             ->generateSlugsFrom('title')
             ->saveSlugsTo('slug');
     }
+
     public function getRouteKeyName()
     {
         return 'slug';
     }
+    
+    public function images()
+    {
+        return $this->hasMany(EducationImage::class)->orderBy('position');
+    }
+
+    public function getImageAttribute()
+    {
+        return $this->images->count() > 0 ? $this->images->get(0)->url : null;
+    }
+
 }

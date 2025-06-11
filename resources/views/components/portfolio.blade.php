@@ -30,6 +30,15 @@
                     @endforeach
                 </ul>
             </div>
+            <div class="flex items-center gap-2 absolute w-full -bottom-64 md:-bottom-12">
+                <div class="w-full mx-auto">
+                    <div class="my-slider-progress">
+                        <div class="my-slider-progress-bar"></div>
+                    </div>
+                </div>
+                <div class="splide__arrows splide__arrows--ltr">
+                </div>
+            </div>
         </div>
         <div id="thumbnail-carousel" class="splide relative md:absolute bottom-0 right-0 w-full md:w-1/2" aria-label="Puede ver todos nuestros trabajos.">
             <div class="splide__track">

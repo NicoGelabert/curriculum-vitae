@@ -15,10 +15,15 @@
         return {
             isOpen: false,
             currentIndex: 0,
+            currentImageIndex: 0,
             items: [],
 
             get currentItem() {
                 return this.items?.[this.currentIndex] || {};
+            },
+
+            get currentImage() {
+                return this.currentItem?.images?.[this.currentImageIndex + 1] || '';
             },
 
             init() {
@@ -29,16 +34,27 @@
             open(index) {
                 if (this.items[index]) {
                     this.currentIndex = index;
+                    this.currentImageIndex = 0;
                     this.isOpen = true;
                 }
             },
 
             next() {
                 if (this.currentIndex < this.items.length - 1) this.currentIndex++;
+                this.currentImageIndex = 0;
             },
 
             prev() {
                 if (this.currentIndex > 0) this.currentIndex--;
+                this.currentImageIndex = 0;
+            },
+
+            nextImage() {
+                if (this.currentImageIndex < this.currentItem.images.length - 2) this.currentImageIndex++;
+            },
+
+            prevImage() {
+                if (this.currentImageIndex > 0) this.currentImageIndex--;
             },
         };
     }
@@ -96,7 +112,7 @@
         </div>
     </div>
     <div x-show="isOpen" @click.away="isOpen = false" class="fixed inset-0 flex justify-center bg-white dark:bg-black bg-opacity-85 dark:bg-opacity-85 z-50 overflow-auto">
-        <div class="mx-8 mt-8 mb-24 overflow-auto lg:my-auto lg:flex lg:flex-row lg:gap-8 w-full h-auto lg:max-w-screen-xl">
+        <div class="mx-8 mt-8 lg:mt-16 overflow-auto flex flex-col lg:flex-row gap-8 w-full h-auto lg:max-w-screen-xl">
             <div class="lg:w-1/2 flex flex-col gap-4">
                 <div class="flex flex-col gap-2">
                     <p class="text-primary_light dark:text-primary_dark text-xs" x-text="currentItem.timelapse"></p>
@@ -126,6 +142,42 @@
                     <p x-html="currentItem.description"></p>
                 </div>
             </div>
+            <div class="w-full md:w-1/2">
+                <div class="relative">
+                    <!-- Imagen siempre visible -->
+                    <img :src="currentImage" class="w-full object-contain rounded-lg max-h-[70vh]">
+
+                    <!-- Botones solo si hay más de una imagen adicional -->
+                    <template x-if="currentItem.images && currentItem.images.length > 2">
+                        <div class="absolute w-full top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
+                            <button
+                                @click="prevImage"
+                                :class="currentImageIndex === 0
+                                    ? 'opacity-50 cursor-not-allowed pointer-events-none'
+                                    : ''"
+                                class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-[#ccc] text-black flex items-center justify-center h-8 w-8 rounded-full">
+                                ❮
+                            </button>
+                            <button
+                                @click="nextImage"
+                                :class="currentImageIndex === currentItem.images.length - 2
+                                    ? 'opacity-50 cursor-not-allowed pointer-events-none'
+                                    : ''"
+                                class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-[#ccc] text-black flex items-center justify-center h-8 w-8 rounded-full">
+                                ❯
+                            </button>
+                        </div>
+                    </template>
+                </div>
+
+                <!-- Indicador solo si hay más de una imagen adicional -->
+                <template x-if="currentItem.images && currentItem.images.length > 2">
+                    <p class="text-center mt-2 text-xs text-gray-500"
+                    x-text="`${currentImageIndex + 1} / ${currentItem.images.length - 1}`">
+                    </p>
+                </template>
+            </div>
+
         </div>
         <div class="fixed bottom-4 right-4 flex w-auto gap-2">
             

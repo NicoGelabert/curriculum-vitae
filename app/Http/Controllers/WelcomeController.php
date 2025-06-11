@@ -29,7 +29,7 @@ class WelcomeController extends Controller
                 'company' => $experience->company,
             ];
         })->values();
-        $educations = Education::orderBy('id', 'desc')->get();
+        $educations = Education::with('images')->orderBy('id', 'desc')->get();
         $educationsJson = $educations->map(function ($education) {
             return [
                 'title' => $education->title,
@@ -39,6 +39,7 @@ class WelcomeController extends Controller
                 'image' => $education->image,
                 'school' => $education->school,
                 'certificate' => $education->certificate,
+                'images' => $education->images->pluck('url')->toArray(),
             ];
         })->values();
         $skills = Skill::all();

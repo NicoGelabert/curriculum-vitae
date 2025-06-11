@@ -36,20 +36,20 @@
                 <ul class="splide__list">
                     @foreach($homeherobanners as $homeherobanner)
                     <li class="splide__slide mx-auto">
-                        <div class="w-full flex flex-col md:flex-row md:justify-between gap-8">
+                        <div class="w-full flex flex-col-reverse items-center md:flex-row md:justify-between gap-8">
                             <div class="flex flex-col justify-center gap-6 lg:gap-12 w-full md:w-1/2">
                                 <div class="flex gap-4 items-center animate-icon">
-                                    <p class="text-3xl">0{{ __($homeherobanner->id) }}</p>
+                                    <p class="text-3xl opacity-30">0{{ __($homeherobanner->id) }}</p>
                                 </div>
                                 <h1 class="animate-h1 text-4xl md:text-6xl leading-tight font-bold">{{ __($homeherobanner->headline) }}</h1>
                                 <p class="animate-p">{{ __($homeherobanner->description) }}</p>
-                                <div class="animate-button flex md:flex-col lg:flex-row gap-4">
-                                    <x-button href="https://demo.chimicreativo.es/" target="blank"><p>{{ __('Ver E-Commerce Demo') }}</p></x-button>
-                                    <x-button href="#works" class="btn-secondary"><p>{{ __('Ver Portfolio') }}</p></x-button>
+                                <div class="animate-button flex flex-col lg:flex-row gap-4">
+                                    <!-- <x-button href="https://demo.chimicreativo.es/" target="blank"><p>{{ __('Ver E-Commerce Demo') }}</p></x-button> -->
+                                    <x-button href="#works"><p>{{ __('Ver Portfolio') }}</p></x-button>
                                 </div>
                             </div>
-                            <div class="w-full md:w-1/2 flex items-center">
-                                <img src="{{ $homeherobanner->image }}" alt="{{ __($homeherobanner->title) }}" class="animate-img">
+                            <div class="w-full md:w-1/2 flex items-center justify-center">
+                                <img src="{{ $homeherobanner->image }}" alt="{{ __($homeherobanner->title) }}" class="animate-img max-w-[50%]">
                             </div>
                         </div>
                     </li>
