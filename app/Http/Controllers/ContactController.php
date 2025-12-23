@@ -32,7 +32,7 @@ class ContactController extends Controller
             'https://www.google.com/recaptcha/api/siteverify',
             [
                 'secret' => env('RECAPTCHA_SECRET_KEY'),
-                'response' => $request->captcha
+                'response' => $request->input('captcha')
             ]
         );
 
