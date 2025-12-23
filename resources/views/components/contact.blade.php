@@ -14,7 +14,7 @@
                 <input id="emailInput" type="email" name="email" placeholder="{{ __('Su correo electrónico') }}" required class="account w-full">
                 <input id="phoneInput" type="tel" name="phone" placeholder="{{ __('Su teléfono') }}" required class="account w-full" pattern="[0-9]{9}">
                 <textarea id="messageInput" name="message" placeholder="{{__('Deje un mensaje') }}" rows="4" required class="account w-full"></textarea>
-                <div class="g-recaptcha" data-sitekey="6Lcvb4IqAAAAABl4-7hmAxdmfCQ0tfeEMWuRKT09"></div>
+                <div class="g-recaptcha" data-sitekey="6Leh8TQsAAAAAMmqp9zhhwkxwkauBGXH9tnD8zG8"></div>
                 <x-button id="subscribeBtn" type="submit">{{__('Enviar')}}</x-button>
             </div>
         </form>
@@ -35,12 +35,20 @@
         const errorMessage = document.getElementById('errorMessage');
 
         form.addEventListener('submit', async function(event) {
-            event.preventDefault(); // Prevent default form submission behavior
+            event.preventDefault();
 
             const name = document.getElementById('nameInput').value;
             const email = document.getElementById('emailInput').value;
             const phone = document.getElementById('phoneInput').value;
             const message = document.getElementById('messageInput').value;
+
+            const captchaToken = grecaptcha.getResponse();
+
+            if (!captchaToken) {
+                alert('Por favor confirma que no eres un robot 🤖');
+                return;
+            }
+
             try {
                 const response = await fetch('{{ route("contact.store") }}', {
                     method: 'POST',
@@ -48,18 +56,24 @@
                         'Content-Type': 'application/json',
                         'X-CSRF-TOKEN': '{{ csrf_token() }}'
                     },
-                    body: JSON.stringify({ name, email, phone, message })
+                    body: JSON.stringify({ 
+                        name, email, phone, message, 
+                        captcha: captchaToken 
+                    })
                 });
 
                 const data = await response.json();
+
                 if (response.ok) {
                     successMessage.style.display = 'block';
                     form.style.display = 'none';
                 } else {
                     errorMessage.style.display = 'block';
+                    grecaptcha.reset();
                 }
             } catch (error) {
                 errorMessage.style.display = 'block';
+                grecaptcha.reset();
             }
         });
     });
