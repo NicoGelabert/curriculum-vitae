@@ -149,7 +149,8 @@
         
             if (typeof gtag === 'function') {
                 gtag('event', 'section_view', {
-                    section: section
+                    section: section,
+                    debug_mode: true
                 });
             }
         }
