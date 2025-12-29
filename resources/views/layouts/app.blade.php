@@ -134,6 +134,31 @@
         </div>
 
     </div>
+    
+    <!-- Eventos de scroll -->
+    <script>
+    (function() {
+        function trackSection() {
+            const hash = window.location.hash;
+        
+            if (!hash) return;
+            const section = hash.replace('#', '');
+        
+            if (window.lastTrackedSection === section) return;
+            window.lastTrackedSection = section;
+        
+            if (typeof gtag === 'function') {
+                gtag('event', 'section_view', {
+                    section: section
+                });
+            }
+        }
+        window.addEventListener('hashchange', trackSection);
+        window.addEventListener('load', trackSection);
+    })();
+    </script>
+    <!-- Fin Eventos de scroll -->
+
     </body>
 </html>
 <script>
