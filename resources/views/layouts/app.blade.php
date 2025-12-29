@@ -150,7 +150,6 @@
             if (typeof gtag === 'function') {
                 gtag('event', 'section_view', {
                     section: section,
-                    debug_mode: true
                 });
             }
         }
